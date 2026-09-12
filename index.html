@@ -1,0 +1,4219 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alaobix — Web Design & Software Development Studio</title>
+    <meta
+      name="description"
+      content="Alaobix is a web design & software development agency. Strategy, design and engineering under one roof — shipped fast, built to last."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF5A1F'/%3E%3Cpath d='M12 9 6 16l6 7M20 9l6 7-6 7M18 7l-4 18' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+
+  <body class="custom-cursor">
+      <a
+      href="#main"
+      class="sr-only focus:not-sr-only fixed top-4 start-4 z-[300] bg-ink text-white px-5 py-2.5 rounded-full font-display font-semibold text-sm"
+      >پرش به محتوا</a
+    >
+
+    <!-- Custom cursor -->
+    <div id="cursorDot" aria-hidden="true"></div>
+    <div id="cursorRing" aria-hidden="true"></div>
+    <!-- Reading progress (single post) -->
+    <div
+      id="progressBar"
+      class="fixed top-0 start-0 h-[3px] bg-primary z-[120] w-0"
+      aria-hidden="true"
+    ></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header id="siteNav" class="fixed top-0 inset-x-0 z-[80]">
+      <div class="container-x">
+        <nav
+          class="flex items-center justify-between h-[76px]"
+          aria-label="Main navigation"
+        >
+          <a
+            href="#/"
+            class="flex items-center gap-2.5 group"
+            aria-label="Alaobix — home"
+          >
+            <span
+              class="w-9 h-9 rounded-xl grid place-items-center text-white transition-transform duration-300 group-hover:rotate-6"
+              style="background: var(--color-primary)"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M8.5 7 4 12l4.5 5" />
+                <path d="M15.5 7 20 12l-4.5 5" />
+                <path d="M13.2 5.5 10.8 18.5" />
+              </svg>
+            </span>
+            <span class="font-display font-bold text-xl tracking-tight"
+              >Alaobix</span
+            >
+          </a>
+          <div class="hidden lg:flex items-center gap-9">
+            <a href="#/" class="nav-link" data-route="home">خانه</a>
+            <a href="#/about" class="nav-link" data-route="about">درباره</a>
+            <a href="#/services" class="nav-link" data-route="services"
+              >خدمات</a
+            >
+            <a href="#/blog" class="nav-link" data-route="blog">بلاگ</a>
+            <a href="#/contact" class="nav-link" data-route="contact"
+              >تماس</a
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <a
+              href="#/contact"
+              data-magnetic="8"
+              class="btn-primary btn-sm hidden sm:inline-flex"
+              >شروع پروژه <i data-icon="arrow" class="w-4 h-4"></i
+            ></a>
+            <button
+              id="menuBtn"
+              class="lg:hidden w-11 h-11 grid place-items-center rounded-xl border border-ink/10 bg-white/70"
+              aria-label="باز کردن منو"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+            >
+              <i data-icon="menu" class="w-5 h-5"></i>
+            </button>
+
+          </div>
+        </nav>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-paper border-t border-ink/10 shadow-lift px-6 py-6"
+      >
+        <nav class="flex flex-col" aria-label="Mobile navigation">
+            <a
+              href="#/"
+              class="mobile-link py-4 border-b border-ink/8 font-display text-2xl font-semibold tracking-tight"
+              >خانه</a
+            >
+            <a
+              href="#/about"
+              class="mobile-link py-4 border-b border-ink/8 font-display text-2xl font-semibold tracking-tight"
+              >درباره</a
+            >
+            <a
+              href="#/services"
+              class="mobile-link py-4 border-b border-ink/8 font-display text-2xl font-semibold tracking-tight"
+              >خدمات</a
+            >
+            <a
+              href="#/blog"
+              class="mobile-link py-4 border-b border-ink/8 font-display text-2xl font-semibold tracking-tight"
+              >بلاگ</a
+            >
+            <a
+              href="#/contact"
+              class="mobile-link py-4 font-display text-2xl font-semibold tracking-tight text-primary"
+              >تماس</a
+            >
+          </nav>
+          <a href="#/contact" class="btn-primary w-full mt-6"
+            >شروع پروژه <i data-icon="arrow" class="w-4 h-4"></i
+          ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ================================================== -->
+      <!-- PAGE: HOME -->
+      <!-- ================================================== -->
+      <section class="page" id="page-home">
+        <!-- HERO -->
+        <div class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+          <div
+            class="absolute -top-32 end-[8%] w-[520px] h-[520px] rounded-full bg-primary/15 blur-[130px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div class="container-x relative">
+            <div class="grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+              <div class="lg:col-span-6 reveal">
+                <p class="eyebrow">Alaobix · Digital Studio · Lisbon</p>
+                <h1
+                  class="mt-6 font-display font-bold tracking-tight leading-[1.03] text-[clamp(2.5rem,5.6vw,4.4rem)]"
+                >
+                  We turn complex problems into
+                  <span class="relative inline-block text-primary"
+                    >elegant<svg
+                      class="absolute start-0 -bottom-2 w-full"
+                      viewBox="0 0 200 12"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        class="underline-draw"
+                        d="M2 9 C60 2 140 2 198 8"
+                        fill="none"
+                        style="stroke: var(--color-primary)"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      /></svg
+                  ></span>
+                  software.
+                </h1>
+                <p
+                  class="mt-6 text-lg md:text-xl text-ink/60 leading-relaxed max-w-xl"
+                >
+                  Alaobix is a web design &amp; software development agency for
+                  teams that care about craft. Strategy, design and engineering
+                  under one roof — shipped fast, built to last.
+                </p>
+                <div class="mt-9 flex flex-wrap items-center gap-4">
+                  <a href="#/contact" data-magnetic="16" class="btn-primary"
+                    >Start a project
+                    <i
+                      data-icon="arrow"
+                      class="w-4.5 h-4.5 w-[18px] h-[18px]"
+                    ></i
+                  ></a>
+                  <a href="#/services" data-magnetic="12" class="btn-outline"
+                    >Explore our work</a
+                  >
+                </div>
+                <div class="mt-10 flex flex-wrap gap-3">
+                  <span class="chip"
+                    ><i data-icon="star" class="w-3.5 h-3.5 text-primary"></i
+                    >4.9/5 on Clutch</span
+                  >
+                  <span class="chip"
+                    ><i data-icon="check" class="w-3.5 h-3.5 text-primary"></i
+                    >Google Partner</span
+                  >
+                  <span class="chip"
+                    ><i data-icon="shield" class="w-3.5 h-3.5 text-primary"></i
+                    >ISO 27001</span
+                  >
+                </div>
+              </div>
+
+              <!-- Cursor-reactive hero stage -->
+              <div class="lg:col-span-6 reveal" style="--d: 150ms">
+                <div
+                  id="heroStage"
+                  class="relative h-[480px] md:h-[520px] hidden sm:block"
+                  aria-hidden="true"
+                >
+                  <!-- rotating dashed ring -->
+                  <svg
+                    class="absolute -top-8 -start-6 w-28 h-28 text-ink/20 animate-[spin_26s_linear_infinite]"
+                    viewBox="0 0 100 100"
+                  >
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="47"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-dasharray="5 9"
+                    />
+                  </svg>
+                  <div
+                    class="dots absolute bottom-2 -start-10 w-40 h-40 opacity-70"
+                  ></div>
+                  <svg
+                    class="absolute top-24 end-2 w-5 h-5 text-primary/60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg
+                    class="absolute bottom-28 end-16 w-4 h-4 text-ink/25"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+
+                  <!-- browser / dashboard mockup -->
+                  <div
+                    data-depth="0.018"
+                    class="absolute top-10 start-0 end-10"
+                  >
+                    <div
+                      class="rounded-2xl border border-ink/10 bg-white overflow-hidden"
+                      style="
+                        box-shadow:
+                          0 4px 10px rgba(24, 22, 20, 0.06),
+                          0 34px 70px -22px rgba(24, 22, 20, 0.22);
+                      "
+                    >
+                      <div
+                        class="flex items-center gap-2 px-4 py-2.5 border-b border-ink/[.06] bg-[#F5F4F1]"
+                      >
+                        <span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span>
+                        <span
+                          class="w-2.5 h-2.5 rounded-full bg-primary/50"
+                        ></span>
+                        <span
+                          class="ms-3 flex-1 max-w-[280px] rounded-md bg-white border border-ink/[.06] px-3 py-1 font-mono text-[11px] text-ink/40 truncate flex items-center gap-1.5"
+                          ><svg
+                            class="w-3 h-3"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <rect x="4" y="11" width="16" height="10" rx="2" />
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg
+                          >alaobix.studio/northwind</span
+                        >
+                      </div>
+                      <div class="p-5">
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center gap-2">
+                            <span
+                              class="w-4 h-4 rounded-md"
+                              style="background: var(--color-primary)"
+                            ></span>
+                            <span
+                              class="h-2 w-16 rounded-full bg-ink/80"
+                            ></span>
+                          </div>
+                          <div class="flex items-center gap-2.5">
+                            <span
+                              class="h-1.5 w-8 rounded-full bg-ink/15 hidden md:block"
+                            ></span>
+                            <span
+                              class="h-1.5 w-8 rounded-full bg-ink/15 hidden md:block"
+                            ></span>
+                            <span
+                              class="h-6 w-16 rounded-full"
+                              style="
+                                background: rgb(var(--color-primary-rgb) / 0.9);
+                              "
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 mt-5">
+                          <div
+                            class="rounded-lg border border-ink/[.06] bg-paper p-3"
+                          >
+                            <p
+                              class="font-mono text-[9px] uppercase tracking-wider text-ink/40"
+                            >
+                              MRR
+                            </p>
+                            <p class="font-display font-bold text-base mt-0.5">
+                              €48.2k
+                            </p>
+                            <p
+                              class="font-mono text-[10px] text-primary mt-0.5"
+                            >
+                              +12.4%
+                            </p>
+                          </div>
+                          <div
+                            class="rounded-lg border border-ink/[.06] bg-paper p-3"
+                          >
+                            <p
+                              class="font-mono text-[9px] uppercase tracking-wider text-ink/40"
+                            >
+                              Active
+                            </p>
+                            <p class="font-display font-bold text-base mt-0.5">
+                              8,411
+                            </p>
+                            <p
+                              class="font-mono text-[10px] text-primary mt-0.5"
+                            >
+                              +3.1%
+                            </p>
+                          </div>
+                          <div
+                            class="rounded-lg border border-ink/[.06] bg-paper p-3"
+                          >
+                            <p
+                              class="font-mono text-[9px] uppercase tracking-wider text-ink/40"
+                            >
+                              Churn
+                            </p>
+                            <p class="font-display font-bold text-base mt-0.5">
+                              1.2%
+                            </p>
+                            <p class="font-mono text-[10px] text-ink/40 mt-0.5">
+                              −0.3%
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="mt-3 rounded-lg border border-ink/[.06] bg-paper p-3"
+                        >
+                          <svg viewBox="0 0 260 84" class="w-full h-auto">
+                            <defs>
+                              <linearGradient
+                                id="sparkFill"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1"
+                              >
+                                <stop
+                                  offset="0"
+                                  style="
+                                    stop-color: var(--color-primary);
+                                    stop-opacity: 0.24;
+                                  "
+                                />
+                                <stop
+                                  offset="1"
+                                  style="
+                                    stop-color: var(--color-primary);
+                                    stop-opacity: 0;
+                                  "
+                                />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M0 64 L30 56 L60 59 L90 42 L120 46 L150 32 L180 36 L210 20 L245 24 L260 13 L260 84 L0 84 Z"
+                              style="fill: url(#sparkFill)"
+                            />
+                            <path
+                              class="spark-draw"
+                              d="M0 64 L30 56 L60 59 L90 42 L120 46 L150 32 L180 36 L210 20 L245 24 L260 13"
+                              fill="none"
+                              style="stroke: var(--color-primary)"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                            />
+                            <circle
+                              cx="260"
+                              cy="13"
+                              r="4"
+                              style="fill: var(--color-primary)"
+                            />
+                            <circle
+                              cx="260"
+                              cy="13"
+                              r="7"
+                              style="
+                                fill: none;
+                                stroke: var(--color-primary);
+                                stroke-opacity: 0.35;
+                                stroke-width: 2;
+                              "
+                            />
+                          </svg>
+                        </div>
+                        <div class="mt-3 space-y-2">
+                          <div class="flex items-center gap-2">
+                            <span
+                              class="h-1.5 flex-1 rounded-full bg-ink/10"
+                            ></span
+                            ><span
+                              class="h-1.5 w-10 rounded-full bg-ink/10"
+                            ></span>
+                          </div>
+                          <div class="flex items-center gap-2">
+                            <span
+                              class="h-1.5 w-24 rounded-full bg-ink/10"
+                            ></span
+                            ><span
+                              class="h-1.5 flex-1 rounded-full"
+                              style="
+                                background: rgb(
+                                  var(--color-primary-rgb) / 0.35
+                                );
+                              "
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- code card -->
+                  <div
+                    data-depth="0.055"
+                    class="absolute -bottom-2 -start-2 w-[300px] rounded-xl overflow-hidden"
+                    style="
+                      box-shadow:
+                        0 3px 8px rgba(24, 22, 20, 0.1),
+                        0 30px 60px -18px rgba(24, 22, 20, 0.35);
+                    "
+                  >
+                    <div
+                      class="flex items-center gap-2 px-4 py-2.5 bg-[#141312] text-white/45 font-mono text-[11px]"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-white/15"></span
+                      ><span class="w-2 h-2 rounded-full bg-white/15"></span
+                      ><span class="w-2 h-2 rounded-full bg-primary/70"></span>
+                      <span class="ms-2">deploy.js</span>
+                    </div>
+                    <pre
+                      class="p-4 bg-[#1B1917] font-mono text-[12.5px] leading-[1.7] text-[#D6D3CD] overflow-hidden"
+                    ><code><span class="c-kw">const</span> launch = <span class="c-kw">await</span> alaobix.build({
+  stack: <span class="c-str">'typescript'</span>,
+  design: <span class="c-str">'award-grade'</span>,
+  performance: <span class="c-str">'lighthouse-99'</span>,
+  deadlines: <span class="c-str">'respected'</span>,
+});
+
+launch.ship(); <span class="c-com">// 6 weeks, zero drama</span></code></pre>
+                  </div>
+
+                  <!-- floating stat chips -->
+                  <div
+                    data-depth="0.09"
+                    class="absolute -top-2 end-0 card px-4 py-3 flex items-center gap-3"
+                  >
+                    <i data-icon="gauge" class="w-6 h-6 text-primary"></i>
+                    <div>
+                      <p class="font-display font-bold text-xl leading-none">
+                        99
+                      </p>
+                      <p
+                        class="font-mono text-[10px] uppercase tracking-wider text-ink/45 mt-0.5"
+                      >
+                        Lighthouse
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    data-depth="0.075"
+                    class="absolute bottom-24 end-0 card px-4 py-3 flex items-center gap-3"
+                  >
+                    <i data-icon="zap" class="w-6 h-6 text-primary"></i>
+                    <div>
+                      <p class="font-display font-bold text-xl leading-none">
+                        +38%
+                      </p>
+                      <p
+                        class="font-mono text-[10px] uppercase tracking-wider text-ink/45 mt-0.5"
+                      >
+                        Conversion
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 top-0 h-full -z-10 rounded-full bg-primary/10 blur-[90px]"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLIENT LOGO MARQUEE -->
+        <div
+          class="border-y border-ink/[.07] py-6 marquee overflow-hidden"
+          aria-label="Clients we work with"
+        >
+          <div class="marquee-track items-center gap-10 pe-10">
+            <span
+              class="font-mono text-xs uppercase tracking-[.3em] text-ink/60 shrink-0"
+              >Trusted by 120+ product teams</span
+            ><span class="text-primary font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >NORTHWIND</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >FORMA</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >MEDLINK</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >VANTAGE</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >KESTREL</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >ORBITAL</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >BASALT</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >HELIO</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-mono text-xs uppercase tracking-[.3em] text-ink/60 shrink-0"
+              >Trusted by 120+ product teams</span
+            ><span class="text-primary font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >NORTHWIND</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >FORMA</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >MEDLINK</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >VANTAGE</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >KESTREL</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >ORBITAL</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >BASALT</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+            <span
+              class="font-display font-semibold text-lg text-ink/30 shrink-0"
+              >HELIO</span
+            ><span class="text-primary/50 font-mono text-xs shrink-0">//</span>
+          </div>
+        </div>
+
+        <!-- SERVICES PREVIEW -->
+        <section class="py-24 lg:py-32">
+          <div
+            class="container-x grid lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+          >
+            <div class="lg:col-span-5 reveal">
+              <p class="eyebrow">Services</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight leading-[1.08] text-3xl md:text-[2.6rem]"
+              >
+                Everything a product needs, under one roof.
+              </h2>
+              <p class="mt-5 text-lg text-ink/60 leading-relaxed">
+                Six disciplines, one team, one standard. Start where it hurts —
+                we scale with you.
+              </p>
+              <a href="#/services" class="btn-primary mt-8"
+                >All six services <i data-icon="arrow" class="w-4 h-4"></i
+              ></a>
+            </div>
+            <div class="lg:col-span-7" id="homeServices"></div>
+          </div>
+        </section>
+
+        <!-- FEATURED WORK -->
+        <section
+          class="py-24 lg:py-32 bg-white border-y border-ink/[.06] relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 start-[5%] w-[420px] h-[420px] rounded-full bg-primary/10 blur-[120px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div class="container-x relative">
+            <div
+              class="flex flex-wrap items-end justify-between gap-6 mb-16 reveal"
+            >
+              <div>
+                <p class="eyebrow">Selected work</p>
+                <h2
+                  class="mt-5 font-display font-bold tracking-tight leading-[1.08] text-3xl md:text-[2.6rem]"
+                >
+                  Proof, not promises.
+                </h2>
+              </div>
+              <a
+                href="#/blog"
+                class="font-display font-semibold text-ink hover:text-primary transition-colors inline-flex items-center gap-2 group"
+                >Case studies on the blog
+                <i
+                  data-icon="arrow"
+                  class="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                ></i
+              ></a>
+            </div>
+            <div id="homePortfolio" class="space-y-24 lg:space-y-32"></div>
+          </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="py-24 lg:py-32">
+          <div class="container-x">
+            <div class="max-w-2xl reveal">
+              <p class="eyebrow">How we work</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight leading-[1.08] text-3xl md:text-[2.6rem]"
+              >
+                Momentum without chaos.
+              </h2>
+              <p class="mt-5 text-lg text-ink/60 leading-relaxed">
+                A process refined over 240 projects — visible progress every
+                week, no surprises at the end.
+              </p>
+            </div>
+            <div class="relative mt-16">
+              <div
+                class="hidden lg:block absolute top-[26px] start-[65px] end-[65px] border-t-2 border-dashed border-ink/15"
+                aria-hidden="true"
+              ></div>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                <div class="reveal">
+                  <div
+                    class="w-[52px] h-[52px] rounded-full bg-white border border-ink/10 grid place-items-center font-mono text-sm text-primary shadow-soft"
+                  >
+                    01
+                  </div>
+                  <h3
+                    class="mt-6 font-display text-xl font-semibold tracking-tight"
+                  >
+                    Discover
+                  </h3>
+                  <p class="mt-3 text-ink/60 leading-relaxed">
+                    Workshops, audits and honest conversations. We learn your
+                    business before proposing anything.
+                  </p>
+                </div>
+                <div class="reveal" style="--d: 120ms">
+                  <div
+                    class="w-[52px] h-[52px] rounded-full bg-white border border-ink/10 grid place-items-center font-mono text-sm text-primary shadow-soft"
+                  >
+                    02
+                  </div>
+                  <h3
+                    class="mt-6 font-display text-xl font-semibold tracking-tight"
+                  >
+                    Design
+                  </h3>
+                  <p class="mt-3 text-ink/60 leading-relaxed">
+                    Prototypes in week one, tested with real users. We iterate
+                    in the open, with you in the room.
+                  </p>
+                </div>
+                <div class="reveal" style="--d: 240ms">
+                  <div
+                    class="w-[52px] h-[52px] rounded-full bg-white border border-ink/10 grid place-items-center font-mono text-sm text-primary shadow-soft"
+                  >
+                    03
+                  </div>
+                  <h3
+                    class="mt-6 font-display text-xl font-semibold tracking-tight"
+                  >
+                    Build
+                  </h3>
+                  <p class="mt-3 text-ink/60 leading-relaxed">
+                    Senior engineers, weekly demos, code you could audit. Boring
+                    reliability, on purpose.
+                  </p>
+                </div>
+                <div class="reveal" style="--d: 360ms">
+                  <div
+                    class="w-[52px] h-[52px] rounded-full bg-white border border-ink/10 grid place-items-center font-mono text-sm text-primary shadow-soft"
+                  >
+                    04
+                  </div>
+                  <h3
+                    class="mt-6 font-display text-xl font-semibold tracking-tight"
+                  >
+                    Ship &amp; grow
+                  </h3>
+                  <p class="mt-3 text-ink/60 leading-relaxed">
+                    Launch is the midpoint. We measure, refine and grow what we
+                    shipped — together.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="py-24 lg:py-32 bg-white border-y border-ink/[.06]">
+          <div class="container-x">
+            <div class="text-center reveal">
+              <p class="eyebrow inline-block">Client words</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]"
+              >
+                Don't take our word for it.
+              </h2>
+            </div>
+            <div class="mt-14 max-w-4xl mx-auto reveal" id="testiWrap"></div>
+          </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="py-20 lg:py-24">
+          <div class="container-x">
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 border-y border-ink/10 divide-x divide-y lg:divide-y-0 divide-ink/10"
+            >
+              <div class="py-10 px-6 text-center reveal">
+                <p
+                  class="font-display font-bold text-4xl md:text-5xl tracking-tight"
+                >
+                  <span data-count="240">0</span
+                  ><span class="text-primary">+</span>
+                </p>
+                <p
+                  class="mt-2 font-mono text-xs uppercase tracking-[.2em] text-ink/50"
+                >
+                  Projects shipped
+                </p>
+              </div>
+              <div class="py-10 px-6 text-center reveal" style="--d: 100ms">
+                <p
+                  class="font-display font-bold text-4xl md:text-5xl tracking-tight"
+                >
+                  <span data-count="120">0</span
+                  ><span class="text-primary">+</span>
+                </p>
+                <p
+                  class="mt-2 font-mono text-xs uppercase tracking-[.2em] text-ink/50"
+                >
+                  Happy clients
+                </p>
+              </div>
+              <div class="py-10 px-6 text-center reveal" style="--d: 200ms">
+                <p
+                  class="font-display font-bold text-4xl md:text-5xl tracking-tight"
+                >
+                  <span data-count="9">0</span
+                  ><span class="text-primary">yrs</span>
+                </p>
+                <p
+                  class="mt-2 font-mono text-xs uppercase tracking-[.2em] text-ink/50"
+                >
+                  In business
+                </p>
+              </div>
+              <div class="py-10 px-6 text-center reveal" style="--d: 300ms">
+                <p
+                  class="font-display font-bold text-4xl md:text-5xl tracking-tight"
+                >
+                  <span data-count="98">0</span
+                  ><span class="text-primary">%</span>
+                </p>
+                <p
+                  class="mt-2 font-mono text-xs uppercase tracking-[.2em] text-ink/50"
+                >
+                  Client retention
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BLOG PREVIEW -->
+        <section class="py-24 lg:py-32 bg-white border-y border-ink/[.06]">
+          <div class="container-x">
+            <div
+              class="flex flex-wrap items-end justify-between gap-6 mb-14 reveal"
+            >
+              <div>
+                <p class="eyebrow">From the blog</p>
+                <h2
+                  class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]"
+                >
+                  Notes from the studio.
+                </h2>
+              </div>
+              <a
+                href="#/blog"
+                class="font-display font-semibold text-ink hover:text-primary transition-colors inline-flex items-center gap-2 group"
+                >All articles
+                <i
+                  data-icon="arrow"
+                  class="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                ></i
+              ></a>
+            </div>
+            <div
+              id="homeBlog"
+              class="grid md:grid-cols-3 gap-6 lg:gap-8 items-start"
+            ></div>
+          </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-24 lg:py-32">
+          <div class="container-x">
+            <div data-cta></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: ABOUT -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-about">
+        <div class="relative pt-32 lg:pt-40 pb-20 overflow-hidden">
+          <div
+            class="absolute -top-24 start-[10%] w-[460px] h-[460px] rounded-full bg-primary/12 blur-[130px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="container-x relative grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <div class="reveal">
+              <p class="eyebrow">About Alaobix</p>
+              <h1
+                class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.5vw,3.6rem)]"
+              >
+                A small studio with an unreasonable standard.
+              </h1>
+              <p class="mt-6 text-lg text-ink/60 leading-relaxed">
+                We're 24 designers, engineers and researchers who believe
+                software should be held to the same standard as architecture: it
+                should stand, it should serve, and it should last.
+              </p>
+            </div>
+            <div
+              class="relative h-[380px] md:h-[440px] reveal"
+              style="--d: 150ms"
+            >
+              <img
+                src="https://picsum.photos/seed/alaobix-studio1/900/640.jpg"
+                alt="The Alaobix workspace in Lisbon"
+                class="absolute top-0 start-0 w-[78%] rounded-2xl object-cover shadow-lift aspect-[9/6.4]"
+              />
+              <img
+                src="https://picsum.photos/seed/alaobix-studio2/600/620.jpg"
+                alt="Team working session at Alaobix"
+                class="absolute bottom-0 end-0 w-[52%] rounded-2xl object-cover shadow-lift aspect-[6/6.2] border-4 border-paper"
+              />
+              <span class="chip absolute top-6 end-2 shadow-soft"
+                >The studio · Rua da Prata</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- STORY & MISSION -->
+        <section class="py-24 lg:py-28 bg-white border-y border-ink/[.06]">
+          <div class="container-x grid lg:grid-cols-12 gap-14">
+            <div class="lg:col-span-7 reveal">
+              <p class="eyebrow">The story so far</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight leading-[1.1] text-3xl md:text-4xl"
+              >
+                Built as if we had to maintain it ourselves.
+              </h2>
+              <div
+                class="mt-7 space-y-5 text-lg text-ink/70 leading-relaxed max-w-2xl"
+              >
+                <p>
+                  Alaobix started in 2016, in a Lisbon attic, with two laptops
+                  and a shared irritation: too much of the web was being built
+                  quickly, cheaply and thoughtlessly — and clients were paying
+                  for it twice.
+                </p>
+                <p>
+                  We decided that every project would be built as if we had to
+                  maintain it ourselves. Nine years later, that is still the
+                  filter for every decision we make:
+                  <em class="text-ink font-medium"
+                    >what would we do if this were ours?</em
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="lg:col-span-5 reveal" style="--d: 150ms">
+              <blockquote
+                class="card p-8 lg:p-10 h-full flex flex-col justify-center"
+              >
+                <p
+                  class="font-display text-2xl font-medium leading-relaxed tracking-tight"
+                >
+                  "Our mission is boring on purpose: ship work we're proud to
+                  sign, for clients we'd invite to dinner."
+                </p>
+                <footer
+                  class="mt-6 font-mono text-xs uppercase tracking-[.2em] text-ink/45"
+                >
+                  Marta Oliveira · Founder
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="py-24 lg:py-32">
+          <div class="container-x">
+            <div class="max-w-2xl reveal">
+              <p class="eyebrow">Why choose us</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]"
+              >
+                Four things we refuse to compromise.
+              </h2>
+            </div>
+            <div class="mt-12" id="aboutValues">
+              <div
+                class="reveal group grid md:grid-cols-12 gap-4 md:gap-8 items-center border-t border-ink/10 py-8"
+              >
+                <span class="md:col-span-1 font-mono text-sm text-primary"
+                  >01</span
+                >
+                <h3
+                  class="md:col-span-4 font-display text-2xl font-semibold tracking-tight group-hover:text-primary transition-colors"
+                >
+                  Craft over shortcuts
+                </h3>
+                <p class="md:col-span-7 text-ink/60 leading-relaxed">
+                  If a shortcut exists, we've tested it — and we can tell you
+                  exactly why we didn't take it.
+                </p>
+              </div>
+              <div
+                class="reveal group grid md:grid-cols-12 gap-4 md:gap-8 items-center border-t border-ink/10 py-8"
+              >
+                <span class="md:col-span-1 font-mono text-sm text-primary"
+                  >02</span
+                >
+                <h3
+                  class="md:col-span-4 font-display text-2xl font-semibold tracking-tight group-hover:text-primary transition-colors"
+                >
+                  Radical clarity
+                </h3>
+                <p class="md:col-span-7 text-ink/60 leading-relaxed">
+                  Plain language, honest estimates, visible progress. You'll
+                  never wonder what we're doing.
+                </p>
+              </div>
+              <div
+                class="reveal group grid md:grid-cols-12 gap-4 md:gap-8 items-center border-t border-ink/10 py-8"
+              >
+                <span class="md:col-span-1 font-mono text-sm text-primary"
+                  >03</span
+                >
+                <h3
+                  class="md:col-span-4 font-display text-2xl font-semibold tracking-tight group-hover:text-primary transition-colors"
+                >
+                  Own the outcome
+                </h3>
+                <p class="md:col-span-7 text-ink/60 leading-relaxed">
+                  We don't bill hours and shrug. We tie ourselves to the metric
+                  you're actually trying to move.
+                </p>
+              </div>
+              <div
+                class="reveal group grid md:grid-cols-12 gap-4 md:gap-8 items-center border-t border-b border-ink/10 py-8"
+              >
+                <span class="md:col-span-1 font-mono text-sm text-primary"
+                  >04</span
+                >
+                <h3
+                  class="md:col-span-4 font-display text-2xl font-semibold tracking-tight group-hover:text-primary transition-colors"
+                >
+                  Small teams, senior people
+                </h3>
+                <p class="md:col-span-7 text-ink/60 leading-relaxed">
+                  No pyramid staffing. The people in the pitch are the people in
+                  the repository.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="py-24 lg:py-32 bg-white border-y border-ink/[.06]">
+          <div class="container-x">
+            <div class="flex flex-wrap items-end justify-between gap-6 reveal">
+              <div>
+                <p class="eyebrow">The people</p>
+                <h2
+                  class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]"
+                >
+                  Senior, on purpose.
+                </h2>
+              </div>
+              <p
+                class="font-mono text-xs uppercase tracking-[.2em] text-ink/45"
+              >
+                24 people · 3 disciplines · 1 standard
+              </p>
+            </div>
+            <div
+              id="aboutTeam"
+              class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-start"
+            ></div>
+          </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="py-24 lg:py-32">
+          <div class="container-x grid lg:grid-cols-12 gap-14">
+            <div class="lg:col-span-4 reveal">
+              <p class="eyebrow">Milestones</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem] leading-[1.08]"
+              >
+                Nine years, one direction.
+              </h2>
+              <p class="mt-5 text-lg text-ink/60 leading-relaxed">
+                From an attic to a studio clients keep on retainer for years.
+                The short version:
+              </p>
+            </div>
+            <div class="lg:col-span-8" id="aboutTimeline"></div>
+          </div>
+        </section>
+
+        <section class="pb-24 lg:pb-32">
+          <div class="container-x">
+            <div
+              data-cta
+              data-cta-title="Sound like your kind of studio?"
+              data-cta-sub="We're always up for a conversation with people who care about what they're building."
+            ></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: ALL SERVICES -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-services">
+        <div class="relative pt-32 lg:pt-40 pb-16 overflow-hidden">
+          <div
+            class="absolute -top-20 end-[12%] w-[440px] h-[440px] rounded-full bg-primary/12 blur-[130px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div class="container-x relative max-w-3xl reveal">
+            <p class="eyebrow">Services</p>
+            <h1
+              class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.8vw,3.6rem)]"
+            >
+              Six ways we make software worth signing.
+            </h1>
+            <p class="mt-6 text-lg text-ink/60 leading-relaxed">
+              Every service is delivered by the same senior team — no hand-offs
+              to juniors, no subcontractors. Hover a row to peek, click to dive
+              in.
+            </p>
+          </div>
+        </div>
+
+        <section class="pb-24">
+          <div class="container-x">
+            <div id="servicesList"></div>
+          </div>
+        </section>
+
+        <!-- COMPARISON -->
+        <section class="py-24 lg:py-28 bg-white border-y border-ink/[.06]">
+          <div class="container-x">
+            <div class="max-w-2xl reveal">
+              <p class="eyebrow">The honest comparison</p>
+              <h2
+                class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]"
+              >
+                What "properly" actually buys you.
+              </h2>
+            </div>
+            <div class="mt-12 overflow-x-auto reveal" style="--d: 120ms">
+              <table class="w-full min-w-[720px] text-start border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-ink/10">
+                    <th
+                      class="py-4 pe-6 font-mono text-xs uppercase tracking-[.2em] text-ink/45 font-medium w-[36%]"
+                    >
+                      Criterion
+                    </th>
+                    <th
+                      class="py-4 px-6 font-display font-bold text-lg w-[32%] rounded-t-xl"
+                      style="background: rgb(var(--color-primary-rgb) / 0.07)"
+                    >
+                      Alaobix
+                    </th>
+                    <th
+                      class="py-4 px-6 font-display font-semibold text-lg text-ink/60 w-[16%]"
+                    >
+                      Typical agency
+                    </th>
+                    <th
+                      class="py-4 px-6 font-display font-semibold text-lg text-ink/60 w-[16%]"
+                    >
+                      Freelancer
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="compareBody" class="font-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-24 lg:pb-32">
+          <div class="container-x">
+            <div
+              data-cta
+              data-cta-title="Not sure which service you need?"
+              data-cta-sub="Tell us the problem in plain language. We'll tell you — honestly — whether we're the right team for it."
+            ></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: SINGLE SERVICE (reusable template) -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-service">
+        <div id="svc-hero"></div>
+        <div id="svc-features"></div>
+        <div id="svc-process"></div>
+        <div id="svc-tiers"></div>
+        <div id="svc-cases"></div>
+        <div id="svc-faq"></div>
+        <section class="pb-24 lg:pb-32 pt-4">
+          <div class="container-x">
+            <div data-cta></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: BLOG -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-blog">
+        <div class="relative pt-32 lg:pt-40 pb-12 overflow-hidden">
+          <div
+            class="absolute -top-24 start-[15%] w-[420px] h-[420px] rounded-full bg-primary/12 blur-[130px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div class="container-x relative max-w-3xl reveal">
+            <p class="eyebrow">The Alaobix blog</p>
+            <h1
+              class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.8vw,3.6rem)]"
+            >
+              Notes from the build.
+            </h1>
+            <p class="mt-6 text-lg text-ink/60 leading-relaxed">
+              Engineering, design and the business of making software — written
+              by the people doing the work, not a content farm.
+            </p>
+          </div>
+        </div>
+
+        <section class="pb-24">
+          <div class="container-x">
+            <div id="featuredPost"></div>
+            <div
+              class="mt-14 flex flex-wrap items-center gap-2.5 reveal"
+              id="filterTabs"
+              role="tablist"
+              aria-label="Filter posts by category"
+            ></div>
+            <div
+              id="blogGrid"
+              class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            ></div>
+            <div
+              id="blogPager"
+              class="mt-12 flex items-center justify-center gap-2.5"
+            ></div>
+
+            <!-- Newsletter -->
+            <div
+              class="mt-20 relative overflow-hidden rounded-[2rem] bg-white border border-ink/[.07] p-8 md:p-14 reveal"
+              style="
+                box-shadow:
+                  0 1px 2px rgba(24, 22, 20, 0.04),
+                  0 20px 50px -20px rgba(24, 22, 20, 0.12);
+              "
+            >
+              <div
+                class="absolute -top-24 end-[10%] w-[300px] h-[300px] rounded-full bg-primary/15 blur-[100px] pointer-events-none"
+                aria-hidden="true"
+              ></div>
+              <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p class="eyebrow">Newsletter</p>
+                  <h2
+                    class="mt-4 font-display font-bold tracking-tight text-2xl md:text-3xl"
+                  >
+                    One email a month. Worth opening.
+                  </h2>
+                  <p class="mt-3 text-ink/60 leading-relaxed">
+                    Deep dives, teardowns and lessons from real projects. No
+                    spam, no growth hacks, unsubscribe anytime.
+                  </p>
+                </div>
+                <form
+                  id="newsForm"
+                  class="flex flex-col sm:flex-row gap-3"
+                  novalidate
+                >
+                  <div class="flex-1">
+                    <label for="newsEmail" class="sr-only">Email address</label>
+                    <input
+                      id="newsEmail"
+                      type="email"
+                      required
+                      placeholder="you@company.com"
+                      class="w-full rounded-full border border-ink/12 bg-paper px-5 py-3.5 text-ink placeholder:text-ink/35 focus:border-primary focus:outline-none transition-colors"
+                    />
+                    <p
+                      class="ferr hidden text-sm mt-2 ps-5"
+                      data-for="newsEmail"
+                    >
+                      Please enter a valid email address.
+                    </p>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-primary shrink-0"
+                    data-label="Subscribe"
+                  >
+                    Subscribe <i data-icon="mail" class="w-4 h-4"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: SINGLE BLOG POST -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-post">
+        <div id="postMount"></div>
+      </section>
+
+      <!-- ================================================== -->
+      <!-- PAGE: CONTACT -->
+      <!-- ================================================== -->
+      <section class="page hidden" id="page-contact">
+        <div class="relative pt-32 lg:pt-40 pb-16 overflow-hidden">
+          <div
+            class="absolute -top-20 end-[10%] w-[460px] h-[460px] rounded-full bg-primary/12 blur-[130px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+          <div class="container-x relative max-w-3xl reveal">
+            <p class="eyebrow">Contact</p>
+            <h1
+              class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.8vw,3.6rem)]"
+            >
+              Let's talk about what you're building.
+            </h1>
+            <p class="mt-6 text-lg text-ink/60 leading-relaxed">
+              One form, zero sales funnels. A senior person reads every message
+              and replies within four business hours.
+            </p>
+          </div>
+        </div>
+
+        <section class="pb-24">
+          <div class="container-x grid lg:grid-cols-12 gap-12">
+            <!-- Info column -->
+            <div class="lg:col-span-5 space-y-10 reveal">
+              <div class="space-y-5">
+                <div class="flex items-start gap-4">
+                  <span
+                    class="w-11 h-11 rounded-xl grid place-items-center text-primary shrink-0"
+                    style="background: rgb(var(--color-primary-rgb) / 0.09)"
+                    ><i data-icon="pin" class="w-5 h-5"></i
+                  ></span>
+                  <div>
+                    <p
+                      class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45"
+                    >
+                      Studio
+                    </p>
+                    <p class="mt-1 font-medium">
+                      Avenida da Liberdade 110<br />1250-146 Lisbon, Portugal
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="w-11 h-11 rounded-xl grid place-items-center text-primary shrink-0"
+                    style="background: rgb(var(--color-primary-rgb) / 0.09)"
+                    ><i data-icon="mail" class="w-5 h-5"></i
+                  ></span>
+                  <div>
+                    <p
+                      class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45"
+                    >
+                      Email
+                    </p>
+                    <a
+                      href="mailto:hello@alaobix.com"
+                      class="mt-1 font-medium hover:text-primary transition-colors inline-block"
+                      >hello@alaobix.com</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="w-11 h-11 rounded-xl grid place-items-center text-primary shrink-0"
+                    style="background: rgb(var(--color-primary-rgb) / 0.09)"
+                    ><i data-icon="phone" class="w-5 h-5"></i
+                  ></span>
+                  <div>
+                    <p
+                      class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45"
+                    >
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+351210000000"
+                      class="mt-1 font-medium hover:text-primary transition-colors inline-block"
+                      >+351 21 000 0000</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="w-11 h-11 rounded-xl grid place-items-center text-primary shrink-0"
+                    style="background: rgb(var(--color-primary-rgb) / 0.09)"
+                    ><i data-icon="clock" class="w-5 h-5"></i
+                  ></span>
+                  <div>
+                    <p
+                      class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45"
+                    >
+                      Hours
+                    </p>
+                    <p class="mt-1 font-medium">Mon–Fri · 9:00–18:00 WET</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card p-6 flex items-center gap-4">
+                <i data-icon="zap" class="w-6 h-6 text-primary shrink-0"></i>
+                <p class="text-sm text-ink/70 leading-relaxed">
+                  <strong class="text-ink">Average first reply: 3h 42m.</strong
+                  ><br /><span class="font-mono text-xs text-ink/45"
+                    >MEASURED OVER THE LAST 12 MONTHS</span
+                  >
+                </p>
+              </div>
+
+              <div>
+                <p
+                  class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45 mb-3"
+                >
+                  Follow along
+                </p>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Alaobix on GitHub"
+                    class="w-11 h-11 rounded-xl border border-ink/12 grid place-items-center text-ink/60 hover:text-primary hover:border-primary transition-colors"
+                    ><i data-icon="github" class="w-5 h-5"></i
+                  ></a>
+                  <a
+                    href="https://dribbble.com"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Alaobix on Dribbble"
+                    class="w-11 h-11 rounded-xl border border-ink/12 grid place-items-center text-ink/60 hover:text-primary hover:border-primary transition-colors"
+                    ><i data-icon="dribbble" class="w-5 h-5"></i
+                  ></a>
+                  <a
+                    href="https://x.com"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Alaobix on X"
+                    class="w-11 h-11 rounded-xl border border-ink/12 grid place-items-center text-ink/60 hover:text-primary hover:border-primary transition-colors"
+                    ><i data-icon="x" class="w-5 h-5"></i
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Alaobix on LinkedIn"
+                    class="w-11 h-11 rounded-xl border border-ink/12 grid place-items-center text-ink/60 hover:text-primary hover:border-primary transition-colors"
+                    ><i data-icon="linkedin" class="w-5 h-5"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Map placeholder -->
+              <div
+                class="relative rounded-2xl border border-ink/[.08] overflow-hidden h-64 map-grid bg-white"
+              >
+                <div
+                  class="absolute top-[38%] -start-6 w-[70%] h-3 bg-white rotate-[8deg] shadow-soft rounded-full"
+                  aria-hidden="true"
+                ></div>
+                <div
+                  class="absolute top-[30%] -start-6 w-[50%] h-2.5 bg-white rotate-[-4deg] shadow-soft rounded-full"
+                  aria-hidden="true"
+                ></div>
+                <div
+                  class="absolute bottom-[22%] end-[8%] w-[55%] h-2.5 bg-white rotate-[12deg] shadow-soft rounded-full"
+                  aria-hidden="true"
+                ></div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+                >
+                  <span
+                    class="pin-pulse relative w-5 h-5 rounded-full grid place-items-center"
+                    style="background: var(--color-primary)"
+                    ><span class="w-2 h-2 rounded-full bg-white"></span
+                  ></span>
+                </div>
+                <div
+                  class="absolute bottom-4 start-4 card px-4 py-3 flex items-center gap-3"
+                >
+                  <i data-icon="pin" class="w-4 h-4 text-primary"></i>
+                  <div>
+                    <p class="font-display font-semibold text-sm leading-tight">
+                      Alaobix Studio
+                    </p>
+                    <p
+                      class="font-mono text-[10px] text-ink/45 uppercase tracking-wider"
+                    >
+                      Lisbon · Portugal
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://maps.google.com/?q=Avenida+da+Liberdade+110+Lisbon"
+                  target="_blank"
+                  rel="noopener"
+                  class="absolute top-4 end-4 chip hover:border-primary hover:text-primary transition-colors bg-white"
+                  >Open in maps <i data-icon="arrow" class="w-3 h-3"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Form column -->
+            <div class="lg:col-span-7 reveal" style="--d: 120ms">
+              <form
+                id="contactForm"
+                class="card p-7 md:p-10 space-y-6"
+                novalidate
+              >
+                <div class="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="cfName"
+                      class="block font-display font-semibold text-sm mb-2"
+                      >Your name</label
+                    >
+                    <input
+                      id="cfName"
+                      type="text"
+                      required
+                      minlength="2"
+                      placeholder="Ada Lovelace"
+                      class="w-full rounded-xl border border-ink/12 bg-paper px-4 py-3.5 placeholder:text-ink/35 focus:border-primary focus:outline-none transition-colors"
+                    />
+                    <p class="ferr hidden text-sm mt-2" data-for="cfName">
+                      Please tell us your name.
+                    </p>
+                  </div>
+                  <div>
+                    <label
+                      for="cfEmail"
+                      class="block font-display font-semibold text-sm mb-2"
+                      >Email</label
+                    >
+                    <input
+                      id="cfEmail"
+                      type="email"
+                      required
+                      placeholder="ada@company.com"
+                      class="w-full rounded-xl border border-ink/12 bg-paper px-4 py-3.5 placeholder:text-ink/35 focus:border-primary focus:outline-none transition-colors"
+                    />
+                    <p class="ferr hidden text-sm mt-2" data-for="cfEmail">
+                      Please enter a valid email address.
+                    </p>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="cfSubject"
+                      class="block font-display font-semibold text-sm mb-2"
+                      >Subject</label
+                    >
+                    <input
+                      id="cfSubject"
+                      type="text"
+                      required
+                      placeholder="New platform build"
+                      class="w-full rounded-xl border border-ink/12 bg-paper px-4 py-3.5 placeholder:text-ink/35 focus:border-primary focus:outline-none transition-colors"
+                    />
+                    <p class="ferr hidden text-sm mt-2" data-for="cfSubject">
+                      A short subject helps us route this well.
+                    </p>
+                  </div>
+                  <div>
+                    <label
+                      for="cfBudget"
+                      class="block font-display font-semibold text-sm mb-2"
+                      >Budget
+                      <span class="font-mono text-[10px] text-ink/40 uppercase"
+                        >optional</span
+                      ></label
+                    >
+                    <select
+                      id="cfBudget"
+                      class="w-full rounded-xl border border-ink/12 bg-paper px-4 py-3.5 text-ink focus:border-primary focus:outline-none transition-colors"
+                    >
+                      <option>Under €10k</option>
+                      <option selected>€10k – €25k</option>
+                      <option>€25k – €60k</option>
+                      <option>€60k+</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="cfMsg"
+                    class="block font-display font-semibold text-sm mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="cfMsg"
+                    required
+                    minlength="10"
+                    rows="6"
+                    placeholder="Tell us about the problem you're trying to solve — links to what exists today help a lot."
+                    class="w-full rounded-xl border border-ink/12 bg-paper px-4 py-3.5 placeholder:text-ink/35 focus:border-primary focus:outline-none transition-colors resize-y"
+                  ></textarea>
+                  <p class="ferr hidden text-sm mt-2" data-for="cfMsg">
+                    Give us at least a sentence or two to work with.
+                  </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-5">
+                  <button
+                    type="submit"
+                    data-magnetic="10"
+                    class="btn-primary"
+                    data-label="Send message"
+                  >
+                    Send message <i data-icon="arrow" class="w-4 h-4"></i>
+                  </button>
+                  <p
+                    class="font-mono text-xs text-ink/40 uppercase tracking-wider"
+                  >
+                    Avg. reply under 4 business hours
+                  </p>
+                </div>
+              </form>
+
+              <!-- Quick FAQ -->
+              <div class="mt-12">
+                <p class="eyebrow">Before you write</p>
+                <div class="mt-6" data-faq-static>
+                  <div class="faq-item border-t border-ink/10">
+                    <button
+                      class="faq-btn w-full flex items-center justify-between gap-6 py-5 text-start"
+                      aria-expanded="false"
+                    >
+                      <span
+                        class="font-display font-semibold text-lg tracking-tight"
+                        >How fast do you reply?</span
+                      ><span class="faq-icon text-primary shrink-0"
+                        ><i data-icon="plus" class="w-5 h-5"></i
+                      ></span>
+                    </button>
+                    <div class="faq-body">
+                      <div>
+                        <p class="pb-5 text-ink/60 leading-relaxed">
+                          Within four business hours, by a senior person — not
+                          an auto-responder. If it's urgent, call us and mention
+                          this page.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item border-t border-ink/10">
+                    <button
+                      class="faq-btn w-full flex items-center justify-between gap-6 py-5 text-start"
+                      aria-expanded="false"
+                    >
+                      <span
+                        class="font-display font-semibold text-lg tracking-tight"
+                        >Do you take on small projects?</span
+                      ><span class="faq-icon text-primary shrink-0"
+                        ><i data-icon="plus" class="w-5 h-5"></i
+                      ></span>
+                    </button>
+                    <div class="faq-body">
+                      <div>
+                        <p class="pb-5 text-ink/60 leading-relaxed">
+                          Yes — focused marketing sites start at €6,500 and
+                          design sprints at €4,500. If a project is too small
+                          for us to do well, we'll say so and point you
+                          somewhere better.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item border-t border-b border-ink/10">
+                    <button
+                      class="faq-btn w-full flex items-center justify-between gap-6 py-5 text-start"
+                      aria-expanded="false"
+                    >
+                      <span
+                        class="font-display font-semibold text-lg tracking-tight"
+                        >Can we meet before committing?</span
+                      ><span class="faq-icon text-primary shrink-0"
+                        ><i data-icon="plus" class="w-5 h-5"></i
+                      ></span>
+                    </button>
+                    <div class="faq-body">
+                      <div>
+                        <p class="pb-5 text-ink/60 leading-relaxed">
+                          Please do. A 30-minute intro call costs nothing and
+                          has killed many bad projects before they started —
+                          occasionally ours.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-[#151310] text-white/70">
+      <div class="container-x pt-16 pb-8">
+        <div class="grid lg:grid-cols-12 gap-12 pb-14 border-b border-white/10">
+          <div class="lg:col-span-5">
+            <a href="#/" class="flex items-center gap-2.5 group w-fit">
+              <span
+                class="w-9 h-9 rounded-xl grid place-items-center text-white transition-transform duration-300 group-hover:rotate-6"
+                style="background: var(--color-primary)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M8.5 7 4 12l4.5 5" />
+                  <path d="M15.5 7 20 12l-4.5 5" />
+                  <path d="M13.2 5.5 10.8 18.5" />
+                </svg>
+              </span>
+              <span
+                class="font-display font-bold text-xl tracking-tight text-white"
+                >Alaobix</span
+              >
+            </a>
+            <p class="mt-5 max-w-sm leading-relaxed text-white/55">
+              A web design &amp; software development studio in Lisbon, working
+              remote-first with ambitious teams everywhere.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="w-10 h-10 rounded-xl border border-white/15 grid place-items-center text-white/60 hover:text-primary hover:border-primary transition-colors"
+                ><i data-icon="github" class="w-4.5 h-4.5 w-[18px] h-[18px]"></i
+              ></a>
+              <a
+                href="https://dribbble.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Dribbble"
+                class="w-10 h-10 rounded-xl border border-white/15 grid place-items-center text-white/60 hover:text-primary hover:border-primary transition-colors"
+                ><i data-icon="dribbble" class="w-[18px] h-[18px]"></i
+              ></a>
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="X"
+                class="w-10 h-10 rounded-xl border border-white/15 grid place-items-center text-white/60 hover:text-primary hover:border-primary transition-colors"
+                ><i data-icon="x" class="w-[18px] h-[18px]"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="w-10 h-10 rounded-xl border border-white/15 grid place-items-center text-white/60 hover:text-primary hover:border-primary transition-colors"
+                ><i data-icon="linkedin" class="w-[18px] h-[18px]"></i
+              ></a>
+            </div>
+          </div>
+          <nav class="lg:col-span-2" aria-label="Services">
+            <p
+              class="font-mono text-[11px] uppercase tracking-[.25em] text-white/40 mb-5"
+            >
+              Services
+            </p>
+            <ul class="space-y-3" id="footerServices"></ul>
+          </nav>
+          <nav class="lg:col-span-2" aria-label="Company">
+            <p
+              class="font-mono text-[11px] uppercase tracking-[.25em] text-white/40 mb-5"
+            >
+              Company
+            </p>
+            <ul class="space-y-3">
+              <li>
+                <a href="#/about" class="hover:text-primary transition-colors"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a href="#/blog" class="hover:text-primary transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#/services"
+                  class="hover:text-primary transition-colors"
+                  >All services</a
+                >
+              </li>
+              <li>
+                <a href="#/contact" class="hover:text-primary transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="lg:col-span-3">
+            <p
+              class="font-mono text-[11px] uppercase tracking-[.25em] text-white/40 mb-5"
+            >
+              Get in touch
+            </p>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@alaobix.com"
+                  class="hover:text-primary transition-colors"
+                  >hello@alaobix.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+351210000000"
+                  class="hover:text-primary transition-colors"
+                  >+351 21 000 0000</a
+                >
+              </li>
+              <li class="text-white/50">Avenida da Liberdade 110, Lisbon</li>
+            </ul>
+            <p class="mt-6 font-mono text-[11px] text-white/35">
+              LISBON · REMOTE-FIRST · SINCE 2016
+            </p>
+          </div>
+        </div>
+        <div
+          class="pt-7 flex flex-wrap items-center justify-between gap-4 text-sm text-white/40"
+        >
+          <p>© 2025 Alaobix Studio — built by hand, obviously.</p>
+          <p class="font-mono text-xs">v3.2 · 98 kB of intent</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ LIVE THEME SWITCHER (every page) ============ -->
+    <div id="themeWidget" class="fixed bottom-6 end-6 z-[100]">
+      <div
+        id="themePanel"
+        class="hidden absolute bottom-full end-0 mb-4 w-[264px] rounded-2xl bg-white border border-ink/10 p-5 shadow-lift origin-bottom-left transition-all duration-200 scale-95 opacity-0"
+      >
+        <p class="font-mono text-[11px] uppercase tracking-[.25em] text-ink/50">
+          Accent color
+        </p>
+        <p class="mt-1.5 text-sm text-ink/60 leading-snug">
+          Live across every page — saved to this browser.
+        </p>
+        <div
+          class="mt-4 grid grid-cols-3 gap-x-2 gap-y-4"
+          id="swatchGrid"
+        ></div>
+      </div>
+      <button
+        id="themeBtn"
+        class="relative w-[52px] h-[52px] rounded-full bg-white border border-ink/10 grid place-items-center shadow-lift hover:-translate-y-1 transition-all duration-300"
+        aria-label="Change accent color"
+        aria-expanded="false"
+        aria-controls="themePanel"
+      >
+        <span
+          class="absolute inset-0 rounded-full animate-ping bg-primary/20 [animation-duration:2.6s] [animation-iteration-count:3]"
+          aria-hidden="true"
+        ></span>
+        <span
+          id="themeDot"
+          class="relative w-5 h-5 rounded-full"
+          style="background: var(--color-primary)"
+        ></span>
+        <svg
+          id="themeChevron"
+          class="absolute -top-1 -end-1 w-4 h-4 text-ink/40 transition-transform duration-300"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        >
+          <path d="m6 15 6-6 6 6" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Toasts -->
+    <div
+      id="toasts"
+      class="fixed bottom-6 start-6 z-[110] flex flex-col gap-3 max-w-[calc(100vw-3rem)]"
+      aria-live="polite"
+    ></div>
+
+    <!-- Service hover preview -->
+    <div id="srvPreview" aria-hidden="true"></div>
+
+    <script>
+      /* ================================================================
+       ALAOBIX — vanilla JS engine (router, theme, renderers, motion)
+       ================================================================ */
+      const $ = (s, c = document) => c.querySelector(s);
+      const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+      const finePointer = matchMedia("(pointer:fine)").matches;
+      const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      /* ---------- Icons (inline SVG, lucide-style strokes) ---------- */
+      const ICONS = {
+        arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+        check: '<path d="M20 6 9 17l-5-5"/>',
+        plus: '<path d="M12 5v14M5 12h14"/>',
+        code: '<path d="m8 6-6 6 6 6M16 6l6 6-6 6"/>',
+        layers:
+          '<path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/>',
+        pen: '<path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/>',
+        globe:
+          '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+        trend: '<path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/>',
+        spark:
+          '<path d="m12 3 1.9 5.7L20 10l-5.7 1.9L12 18l-1.9-6.1L4 10l6.1-1.3L12 3z"/>',
+        zap: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
+        gauge: '<path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>',
+        shield:
+          '<path d="M12 2 4 5v6c0 5.25 3.4 10.1 8 11 4.6-.9 8-5.75 8-11V5l-8-3z"/>',
+        star: '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/>',
+        mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+        phone:
+          '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+        pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+        clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+        calendar:
+          '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+        copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
+        menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+        x: '<path d="M18 6 6 18M6 6l12 12"/>',
+        chevL: '<path d="m15 18-6-6 6-6"/>',
+        chevR: '<path d="m9 18 6-6-6-6"/>',
+        loader: '<path d="M21 12a9 9 0 1 1-6.2-8.6"/>',
+        github:
+          '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.5 2-5-2-7-2"/>',
+        dribbble:
+          '<circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/>',
+        linkedin:
+          '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+      };
+      const icon = (name, cls = "w-5 h-5") =>
+        `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+      $$("[data-icon]").forEach((el) => {
+        el.outerHTML = icon(el.dataset.icon, el.className);
+      });
+
+      /* ---------- Tiny syntax highlighter (theme-aware keywords) ---------- */
+      function hl(src) {
+        return src
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/(\/\/[^\n]*)/g, '<span class="c-com">$1</span>')
+          .replace(/('[^'\n]*')/g, '<span class="c-str">$1</span>')
+          .replace(
+            /\b(const|let|var|function|return|if|else|throw|new|await|async|for|of|import|export|class|true|false|null)\b/g,
+            '<span class="c-kw">$1</span>',
+          )
+          .replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="c-num">$1</span>');
+      }
+
+      /* ---------- Toasts ---------- */
+      function toast(msg, ic = "check") {
+        const t = document.createElement("div");
+        t.className =
+          "toast flex items-center gap-3 bg-ink text-white rounded-xl ps-4 pe-6 py-3.5 text-sm shadow-lift border-s-4";
+        t.style.borderColor = "var(--color-primary)";
+        t.innerHTML = `${icon(ic, "w-4.5 h-4.5 w-[18px] h-[18px] text-primary-light shrink-0")}<span>${msg}</span>`;
+        $("#toasts").appendChild(t);
+        setTimeout(() => {
+          t.classList.add("out");
+          setTimeout(() => t.remove(), 380);
+        }, 3600);
+      }
+
+      /* ================================================================
+       LIVE THEME ENGINE — CSS custom properties, swapped instantly
+       ================================================================ */
+      const THEMES = {
+        orange: {
+          label: "Signal Orange",
+          primary: "#FF5A1F",
+          light: "#FF8A5E",
+          dark: "#D8430D",
+        },
+        blue: {
+          label: "Cobalt",
+          primary: "#1D5FE0",
+          light: "#5B8BF0",
+          dark: "#1547B4",
+        },
+        purple: {
+          label: "Ultraviolet",
+          primary: "#7748E8",
+          light: "#A07EF2",
+          dark: "#5B33BD",
+        },
+        green: {
+          label: "Evergreen",
+          primary: "#0E9F6E",
+          light: "#3EC48E",
+          dark: "#0A7A50",
+        },
+        red: {
+          label: "Crimson",
+          primary: "#E5484D",
+          light: "#F07A7D",
+          dark: "#B93238",
+        },
+        teal: {
+          label: "Teal",
+          primary: "#0D9DA8",
+          light: "#43C6CF",
+          dark: "#097480",
+        },
+      };
+      const hexToTriplet = (h) =>
+        [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)).join(" ");
+
+      function applyTheme(key) {
+        const t = THEMES[key];
+        if (!t) return;
+        const r = document.documentElement.style;
+        r.setProperty("--color-primary", t.primary);
+        r.setProperty("--color-primary-light", t.light);
+        r.setProperty("--color-primary-dark", t.dark);
+        r.setProperty("--color-primary-rgb", hexToTriplet(t.primary));
+        r.setProperty("--color-primary-light-rgb", hexToTriplet(t.light));
+        r.setProperty("--color-primary-dark-rgb", hexToTriplet(t.dark));
+        try {
+          localStorage.setItem("alaobix-theme", key);
+        } catch (e) {}
+        $$("#swatchGrid [data-theme]").forEach((b) => {
+          const on = b.dataset.theme === key;
+          b.querySelector(".sw-ring").classList.toggle("sw-on", on);
+        });
+        currentTheme = key;
+      }
+      let currentTheme = "orange";
+      try {
+        if (localStorage.getItem("alaobix-theme"))
+          currentTheme = localStorage.getItem("alaobix-theme");
+      } catch (e) {}
+
+      /* Build swatch panel */
+      $("#swatchGrid").innerHTML = Object.entries(THEMES)
+        .map(
+          ([k, t]) => `
+  <button type="button" data-theme="${k}" class="flex flex-col items-center gap-1.5 group" aria-label="${t.label}">
+    <span class="relative w-10 h-10 rounded-full block" style="background:${t.primary}">
+      <span class="sw-ring absolute -inset-[5px] rounded-full border-2 transition-all duration-200" style="border-color:${t.primary}; opacity:0; transform:scale(.85)"></span>
+      <span class="absolute inset-0 grid place-items-center text-white opacity-0 transition-opacity duration-200 sw-check">${icon("check", "w-4 h-4")}</span>
+    </span>
+    <span class="font-mono text-[9px] uppercase tracking-wider text-ink/45 group-hover:text-ink transition-colors">${t.label.split(" ")[0]}</span>
+  </button>`,
+        )
+        .join("");
+      document.head.insertAdjacentHTML(
+        "beforeend",
+        `<style>.sw-ring.sw-on{opacity:1 !important;transform:scale(1) !important}.sw-ring.sw-on+.sw-check,[data-theme] .sw-ring.sw-on~.sw-check{opacity:1 !important}</style>`,
+      );
+      /* (checkmark visibility handled structurally below) */
+      $$("#swatchGrid [data-theme]").forEach((b) => {
+        b.addEventListener("click", () => applyTheme(b.dataset.theme));
+      });
+      applyTheme(currentTheme);
+
+      /* Widget open/close */
+      const themePanel = $("#themePanel"),
+        themeBtn = $("#themeBtn");
+      function setPanel(open) {
+        themePanel.classList.toggle("hidden", !open);
+        requestAnimationFrame(() => {
+          themePanel.classList.toggle("opacity-0", !open);
+          themePanel.classList.toggle("scale-95", !open);
+        });
+        themeBtn.setAttribute("aria-expanded", open);
+        $("#themeChevron").style.transform = open ? "rotate(180deg)" : "";
+      }
+      themeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setPanel(themePanel.classList.contains("hidden"));
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("#themeWidget")) setPanel(false);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setPanel(false);
+      });
+
+      /* ================================================================
+       DATA
+       ================================================================ */
+      const SERVICES = [
+        {
+          slug: "web-development",
+          num: "01",
+          icon: "code",
+          title: "Custom Web Development",
+          short:
+            "Hand-built marketing sites, storefronts and web apps that load fast, rank well and scale cleanly.",
+          hero: 'We hand-code websites and web applications the way they should be built: fast, accessible, maintainable — and measured against real business goals, not just "looks good in the demo".',
+          tags: ["TypeScript", "Next.js", "Headless CMS", "CI/CD"],
+          features: [
+            [
+              "Performance budgets from day one",
+              "Every build ships against a Lighthouse 95+ target. We treat speed as a feature, not an afterthought — images, fonts and JS all accounted for.",
+            ],
+            [
+              "Accessible by default",
+              "WCAG 2.2 AA is not a checkbox for us. Keyboard flows, contrast, semantics and screen-reader support are part of the definition of done.",
+            ],
+            [
+              "Design-system components",
+              "Every interface is built from documented, reusable components — so your team can ship new pages without us.",
+            ],
+            [
+              "Headless or classic CMS",
+              "WordPress, headless CMS or a fully custom admin — you get an editing experience your content team will actually enjoy.",
+            ],
+            [
+              "Testing & CI pipelines",
+              "Automated tests, preview deploys and rollback-safe releases. Boring on purpose, reliable by design.",
+            ],
+            [
+              "Security hardening",
+              "Dependency audits, CSP headers, GDPR-ready forms and infrastructure configured by people who read the documentation.",
+            ],
+          ],
+          process: [
+            [
+              "Brief & audit",
+              "We map goals, users and constraints, and audit what you already have. One week, zero ambiguity.",
+            ],
+            [
+              "Architecture",
+              "Tech stack, content model, component inventory — and a plan your CTO can actually read.",
+            ],
+            [
+              "Build sprints",
+              "Weekly demos of real, working software. No forty-slide status decks.",
+            ],
+            [
+              "QA & launch",
+              'Cross-browser, cross-device, load-tested and accessibility-audited before anyone clicks "live".',
+            ],
+            [
+              "Support & growth",
+              "Thirty days of included support, then a retainer if you want us on call.",
+            ],
+          ],
+          tiers: [
+            {
+              name: "Launch",
+              price: "from €6,500",
+              forr: "Marketing sites & landing pages",
+              items: [
+                "Up to 8 page templates",
+                "CMS of your choice",
+                "Lighthouse 95+ guarantee",
+                "SEO foundations",
+                "2 weeks of post-launch support",
+              ],
+              cta: "Start with Launch",
+            },
+            {
+              name: "Scale",
+              price: "from €18,000",
+              forr: "Web apps & custom platforms",
+              featured: true,
+              items: [
+                "Custom product design & build",
+                "Auth, API & database design",
+                "Testing & CI pipeline",
+                "Analytics & experiments",
+                "90 days of support",
+              ],
+              cta: "Plan my build",
+            },
+            {
+              name: "Partner",
+              price: "custom",
+              forr: "Long-term product teams",
+              items: [
+                "Dedicated senior squad",
+                "Roadmap & discovery included",
+                "SLA-backed response times",
+                "Quarterly strategy reviews",
+                "Pause anytime",
+              ],
+              cta: "Talk to us",
+            },
+          ],
+          faqs: [
+            [
+              "How long does a typical build take?",
+              "A focused marketing site ships in 4–6 weeks. Custom platforms and SaaS builds typically run 3–6 months depending on scope. You get a dated plan before we write a line of code.",
+            ],
+            [
+              "What technology do you use?",
+              "Whatever the problem calls for — usually TypeScript, modern frameworks and boring, proven infrastructure. We choose stacks for longevity, not hype.",
+            ],
+            [
+              "Will I be able to update the site myself?",
+              "Yes. Every build includes documentation and a training session for your team. Most clients never need us for day-to-day edits.",
+            ],
+            [
+              "Do you work with our in-house designers?",
+              "Often. We are comfortable executing your designs or leading design ourselves — and we will tell you honestly which we recommend.",
+            ],
+            [
+              "What happens after launch?",
+              "Every project includes 30 days of support. After that, most clients keep us on a monthly retainer for improvements, monitoring and new features.",
+            ],
+          ],
+        },
+
+        {
+          slug: "software",
+          num: "02",
+          icon: "layers",
+          title: "Software Development",
+          short:
+            "SaaS platforms, APIs and internal tools engineered for the long run — by senior people who stay past the launch party.",
+          hero: "We build SaaS platforms, APIs and internal tools by senior engineers who design architecture for year five, not just the demo — and who are still around when you need them.",
+          tags: ["Node.js", "PostgreSQL", "AWS", "OpenAPI"],
+          features: [
+            [
+              "Senior-only squads",
+              "No juniors learning on your invoice. Every engineer on your project has shipped production systems for years.",
+            ],
+            [
+              "Architecture for year five",
+              "We design for the day you have ten times the users and a team of your own maintaining it.",
+            ],
+            [
+              "APIs documented like products",
+              "OpenAPI specs, versioning and docs your partners can actually integrate against.",
+            ],
+            [
+              "Observability from day one",
+              "Logs, metrics and traces wired in before launch — when something breaks, you will know before your users tell you.",
+            ],
+          ],
+          process: [
+            [
+              "Discovery & architecture",
+              "We map the domain, risks and integration surface before committing to a stack.",
+            ],
+            [
+              "Data modeling",
+              "The schema is the product. We get it right before the UI exists.",
+            ],
+            [
+              "Build in sprints",
+              "Working software every week, deployed to staging you can click.",
+            ],
+            [
+              "Harden & observe",
+              "Load tests, security review, dashboards and alerting.",
+            ],
+            [
+              "Scale & iterate",
+              "Post-launch roadmap with the same team that built it.",
+            ],
+          ],
+          tiers: [
+            {
+              name: "MVP",
+              price: "from €28,000",
+              forr: "Validate a product fast",
+              items: [
+                "8–12 week scoped build",
+                "Core feature set only",
+                "Production infrastructure",
+                "Handover documentation",
+              ],
+              cta: "Scope my MVP",
+            },
+            {
+              name: "Platform",
+              price: "from €60,000",
+              forr: "Products with real traction",
+              featured: true,
+              items: [
+                "Full product design & engineering",
+                "Auth, billing & integrations",
+                "Observability & CI/CD",
+                "Quarterly roadmap planning",
+              ],
+              cta: "Plan the platform",
+            },
+            {
+              name: "Squad",
+              price: "custom",
+              forr: "Dedicated capacity",
+              items: [
+                "Senior pod embedded in your team",
+                "Your roadmap, our standards",
+                "Monthly, pause anytime",
+                "Priority SLA",
+              ],
+              cta: "Build my squad",
+            },
+          ],
+          faqs: [
+            [
+              "Who owns the code?",
+              "You do, fully and unambiguously, from the first commit. We work in repositories you control.",
+            ],
+            [
+              "Can you work alongside our existing team?",
+              "Yes — we regularly embed with in-house teams, pair on reviews and leave the codebase better documented than we found it.",
+            ],
+            [
+              "How do you handle security?",
+              "Threat modeling at design time, dependency audits in CI, and infrastructure hardened to baseline CIS benchmarks.",
+            ],
+            [
+              "What happens when the project ends?",
+              "You get full handover: docs, runbooks and a training session. Most clients keep us on retainer anyway.",
+            ],
+          ],
+        },
+
+        {
+          slug: "ui-ux",
+          num: "03",
+          icon: "pen",
+          title: "UI/UX Design",
+          short:
+            "Interfaces that feel obvious — researched, prototyped, tested and polished until your product gets out of its users\u2019 way.",
+          hero: "Interfaces that feel obvious did not get that way by accident. We research, prototype, test and polish until your product gets out of its users\u2019 way — then hand engineers something they can actually build.",
+          tags: ["Research", "Figma", "Design systems", "Prototyping"],
+          features: [
+            [
+              "Research before pixels",
+              "We talk to your users before we draw a single rectangle. Guessing is expensive; interviews are not.",
+            ],
+            [
+              "Prototypes in week one",
+              "Clickable, testable, wrong-fast. The best way to find the right design is to build the cheap wrong ones first.",
+            ],
+            [
+              "Design systems, not screens",
+              "A tokenized, documented system your team ships new screens from — without us.",
+            ],
+            [
+              "Developer-ready handoff",
+              "Specs, states, edge cases and tokens. Your engineers will send thank-you notes.",
+            ],
+          ],
+          process: [
+            [
+              "Research & audit",
+              "Users, analytics, competitors — what we know before we design.",
+            ],
+            [
+              "Flows & wireframes",
+              "The skeleton before the skin, agreed cheaply.",
+            ],
+            [
+              "High-fidelity design",
+              "The craft phase, where brand and interface meet.",
+            ],
+            ["Prototype & test", "Real users, real tasks, recorded sessions."],
+            [
+              "Systemize & hand off",
+              "Tokens, components, docs — a system, not a folder of PNGs.",
+            ],
+          ],
+          pricingNote:
+            "Design engagements from €9,000 · Design sprints from €4,500",
+          faqs: [
+            [
+              "Do you do branding too?",
+              "Yes — see our Brand & Identity service. For product work we can also extend an existing brand system faithfully.",
+            ],
+            [
+              "Can you audit our existing product?",
+              "That is one of our favorite starting points: a teardown with prioritized, effort-scored fixes you can act on immediately.",
+            ],
+            [
+              "What exactly do we get at handoff?",
+              "Figma library, token file ready for code, interaction specs, accessibility notes and a recorded walkthrough.",
+            ],
+          ],
+        },
+
+        {
+          slug: "wordpress",
+          num: "04",
+          icon: "globe",
+          title: "WordPress & CMS",
+          short:
+            "WordPress done properly: custom themes, clean plugins and an editing experience your content team stops complaining about.",
+          hero: "WordPress, done properly: custom themes, sane plugin architecture and an editing experience your content team stops complaining about — with performance numbers you can put in a board deck.",
+          tags: ["Custom themes", "Gutenberg", "WooCommerce", "Migrations"],
+          features: [
+            [
+              "Custom theme development",
+              "No purchased themes, no page-builder bloat. A hand-built theme that looks like your brand and loads like it is 2010 in the good way.",
+            ],
+            [
+              "Blocks built for your content",
+              "Gutenberg blocks modeled on how your editors actually work, not the other way around.",
+            ],
+            [
+              "Migrations without downtime",
+              "Staged, tested, reversible. Your SEO equity moves with you.",
+            ],
+            [
+              "Editing training included",
+              "A recorded session plus docs, so publishing never waits on a support ticket.",
+            ],
+          ],
+          process: [
+            [
+              "Audit your current stack",
+              "Plugins, theme, hosting — what stays, what goes, what it costs.",
+            ],
+            ["Content model & blocks", "Structure first, styling second."],
+            ["Build & migrate", "Staged environment, zero-downtime cutover."],
+            ["Train your editors", "Session, docs and a cheat sheet."],
+            [
+              "Maintain & improve",
+              "Care plan with updates, backups and monthly health reports.",
+            ],
+          ],
+          tiers: [
+            {
+              name: "Site",
+              price: "from €6,500",
+              forr: "Custom WordPress site",
+              items: [
+                "Hand-built theme",
+                "Custom blocks",
+                "Performance optimization",
+                "Migration included",
+              ],
+              cta: "Build my site",
+            },
+            {
+              name: "Rebuild",
+              price: "from €12,000",
+              forr: "Rescue & replatform",
+              featured: true,
+              items: [
+                "Full audit & migration plan",
+                "WooCommerce ready",
+                "Editor training",
+                "90-day care plan",
+              ],
+              cta: "Rescue my site",
+            },
+            {
+              name: "Care plan",
+              price: "from €290/mo",
+              forr: "Ongoing peace of mind",
+              items: [
+                "Updates & backups",
+                "Uptime monitoring",
+                "Monthly health report",
+                "2h priority fixes",
+              ],
+              cta: "Keep it healthy",
+            },
+          ],
+          faqs: [
+            [
+              "Can you rescue our broken WordPress site?",
+              'Usually, yes. We start with a paid audit, then quote the rescue honestly — sometimes the honest quote is "rebuild it".',
+            ],
+            [
+              "Headless or classic WordPress?",
+              "Depends on your team. We build both and will recommend based on who maintains the site after us, not on what is fashionable.",
+            ],
+            [
+              "What about WooCommerce?",
+              "We build and optimize WooCommerce stores regularly — including checkout performance work that directly moves revenue.",
+            ],
+          ],
+        },
+
+        {
+          slug: "seo",
+          num: "05",
+          icon: "trend",
+          title: "SEO & Performance",
+          short:
+            "Rankings follow speed, structure and strategy. We handle the technical foundation and measure against revenue, not vanity charts.",
+          hero: "Rankings follow speed, structure and content strategy. We handle the technical foundation — and report like a CFO, measuring against revenue instead of vanity charts.",
+          tags: ["Core Web Vitals", "Technical SEO", "Schema", "Analytics"],
+          features: [
+            [
+              "Technical SEO audits",
+              "Crawlability, indexation, canonical hygiene, structured data — the unglamorous things that quietly decide rankings.",
+            ],
+            [
+              "Core Web Vitals engineering",
+              "We do not just flag LCP problems; we fix them in the code. Engineering-led SEO is rare and it shows.",
+            ],
+            [
+              "Content architecture",
+              "Topic clusters and internal linking built around how people actually search in your market.",
+            ],
+            [
+              "Analytics you can trust",
+              "Clean measurement, documented events and dashboards your board will understand.",
+            ],
+          ],
+          process: [
+            [
+              "Audit & baseline",
+              "Where you stand, honestly, with a prioritized fix list.",
+            ],
+            [
+              "Fix the foundations",
+              "Technical debt cleared in engineering sprints, not tickets.",
+            ],
+            [
+              "Build the content engine",
+              "Architecture and briefs your writers can execute.",
+            ],
+            [
+              "Measure & iterate",
+              "Monthly experiments with pre-registered success criteria.",
+            ],
+            ["Report like a CFO", "Revenue attribution, not impressions."],
+          ],
+          tiers: [
+            {
+              name: "Audit",
+              price: "€1,900 one-time",
+              forr: "Know where you stand",
+              items: [
+                "Full technical audit",
+                "Core Web Vitals report",
+                "Prioritized 90-day roadmap",
+                "Walkthrough session",
+              ],
+              cta: "Book an audit",
+            },
+            {
+              name: "Growth",
+              price: "from €1,400/mo",
+              forr: "Ongoing compounding",
+              featured: true,
+              items: [
+                "Everything in Audit",
+                "Monthly engineering fixes",
+                "Content architecture",
+                "Experiment reports",
+              ],
+              cta: "Start growing",
+            },
+            {
+              name: "Enterprise",
+              price: "custom",
+              forr: "Multi-site & international",
+              items: [
+                "Multi-market strategy",
+                "Hreflang & geo setups",
+                "Dedicated engineer",
+                "Board-level reporting",
+              ],
+              cta: "Talk to us",
+            },
+          ],
+          faqs: [
+            [
+              "How long until we see results?",
+              "Technical fixes can move Core Web Vitals in weeks; competitive rankings typically take 3–6 months. Anyone promising faster is selling something.",
+            ],
+            [
+              "Do you guarantee rankings?",
+              "No — and you should run from anyone who does. We guarantee the work, the transparency and the measurement.",
+            ],
+            [
+              "Can you fix our Core Web Vitals?",
+              "That is our specialty: engineering-led performance work, verified in the field (not just the lab) after launch.",
+            ],
+          ],
+        },
+
+        {
+          slug: "brand",
+          num: "06",
+          icon: "spark",
+          title: "Brand & Identity",
+          short:
+            "Visual systems that make ambitious companies look the part — logo to launch, deck to signage.",
+          hero: "Visual systems that make ambitious companies look the part — from logo to launch, deck to signage, delivered with a guidelines document people actually read.",
+          tags: ["Identity", "Typography", "Guidelines", "Voice"],
+          features: [
+            [
+              "Identity & logo systems",
+              "Marks built to work at 16 pixels and 16 meters, with the rationale documented.",
+            ],
+            [
+              "Typography & color systems",
+              "Tokens your product and your print shop can share — one source of truth.",
+            ],
+            [
+              "Guidelines people read",
+              "Short, visual, practical. The anti-PDF of brand documents.",
+            ],
+            [
+              "Product & brand cohesion",
+              "Your interface is your brand now. We make the two speak the same language.",
+            ],
+          ],
+          process: [
+            [
+              "Discover & position",
+              "What makes you the only ones who do what you do.",
+            ],
+            ["Explore directions", "Three territories, honestly argued."],
+            [
+              "Refine & test",
+              "The chosen direction, pressure-tested in real contexts.",
+            ],
+            ["Systemize", "Tokens, rules, templates — the kit."],
+            [
+              "Launch kit",
+              "Everything your team needs for day one and day 500.",
+            ],
+          ],
+          pricingNote:
+            "Identity projects from €8,500 · includes full guidelines & launch kit",
+          faqs: [
+            [
+              "How long does an identity take?",
+              "A focused identity runs 5–8 weeks including research, exploration and systemization.",
+            ],
+            [
+              "Do you do naming?",
+              "Yes, with trademark pre-screening and domain sanity checks included.",
+            ],
+            [
+              "What files do we get at the end?",
+              "Everything: source files, export sets for web/print/signage, fonts licensed correctly, and the token file.",
+            ],
+          ],
+        },
+      ];
+
+      const PROJECTS = [
+        {
+          client: "Northwind Finance",
+          year: 2024,
+          title: "A trading dashboard traders actually trust",
+          slug: "northwind",
+          desc: "A real-time platform rebuilt for speed and trust: WebSocket data flows, a design system traders could read at a glance, and zero-jank charts at 60fps.",
+          tags: ["web-development", "software", "ui-ux"],
+          stat: "+42%",
+          statLabel: "trial-to-paid conversion",
+          link: "services/software",
+          linkLabel: "How we build this",
+        },
+        {
+          client: "Forma Studio",
+          year: 2024,
+          title: "E-commerce replatform with sub-second loads",
+          slug: "forma",
+          desc: "A headless replatform for a design-led furniture brand: sub-second pages, a custom checkout and a merchandising backend their team actually uses.",
+          tags: ["web-development", "seo", "brand"],
+          stat: "0.4s",
+          statLabel: "LCP, down from 2.1s",
+          link: "blog/web-vitals-business-metric",
+          linkLabel: "Read the case",
+        },
+        {
+          client: "Medlink Health",
+          year: 2023,
+          title: "A calm patient portal for 40 clinics",
+          slug: "medlink",
+          desc: "An accessible patient portal serving 40 clinics: appointments, secure messaging and records — HIPAA-ready from day one.",
+          tags: ["software", "ui-ux"],
+          stat: "14 wks",
+          statLabel: "from kickoff to HIPAA-ready launch",
+          link: "blog/medlink-case",
+          linkLabel: "Read the case",
+        },
+        {
+          client: "Vantage Analytics",
+          year: 2023,
+          title: "From monolith to modular API",
+          slug: "vantage",
+          desc: "A modular rebuild behind the same product: independent services, canary deploys and an observability culture.",
+          tags: ["software"],
+          stat: "9×",
+          statLabel: "deploy frequency, same team",
+          link: "blog/vantage-api-rebuild",
+          linkLabel: "Read the case",
+        },
+      ];
+
+      const TESTIMONIALS = [
+        {
+          q: "Alaobix rebuilt our platform in fourteen weeks and our activation rate jumped 42%. They question everything — in the best possible way.",
+          name: "Elena Marsh",
+          role: "VP Product, Northwind Finance",
+          seed: "elena",
+        },
+        {
+          q: "The first agency we have worked with that treated performance budgets as seriously as the design. Our LCP went from 2.1 seconds to 0.4.",
+          name: "Jonas Weber",
+          role: "Founder, Forma Studio",
+          seed: "jonas",
+        },
+        {
+          q: "Calm, senior, honest about trade-offs. They said no to half our feature list — and they were right every single time.",
+          name: "Dr. Inês Carvalho",
+          role: "COO, Medlink Health",
+          seed: "ines",
+        },
+        {
+          q: "Two years on retainer and they still reply like it is week one. Our board thinks we hired a product team. In a way, we did.",
+          name: "Priya Nair",
+          role: "CTO, Vantage Analytics",
+          seed: "priya",
+        },
+      ];
+
+      const TEAM = [
+        [
+          "Marta Oliveira",
+          "Founder & Technical Director",
+          "Ex-fintech architect. Reviews every line that ships.",
+          "marta",
+        ],
+        [
+          "Daniel Reyes",
+          "Head of Engineering",
+          "Loves boring tech, hates pagers going off.",
+          "daniel",
+        ],
+        [
+          "Sofia Lindqvist",
+          "Design Lead",
+          "Believes whitespace is a feature.",
+          "sofia",
+        ],
+        [
+          "Tomás Ferreira",
+          "Senior Full-stack Developer",
+          "Shipped 40+ production sites.",
+          "tomas",
+        ],
+        [
+          "Amara Chen",
+          "UX Research Lead",
+          "Talks to users so you don\u2019t have to guess.",
+          "amara",
+        ],
+        [
+          "Lucas Brandt",
+          "Delivery Lead",
+          "Keeps six projects on time, calmly.",
+          "lucas",
+        ],
+      ];
+
+      const TIMELINE = [
+        [
+          "2016",
+          "Two people, one attic, a stubborn idea: build things properly. Our first client is still with us today.",
+        ],
+        [
+          "2018",
+          "First SaaS platform ships. The team grows to eight; we formalize our design-system practice.",
+        ],
+        [
+          "2020",
+          "Remote-first across four time zones. We learn that async writing beats meetings.",
+        ],
+        [
+          "2022",
+          "100th project delivered. Client retention hits 96% — still our proudest metric.",
+        ],
+        [
+          "2024",
+          "24 people, three disciplines, one standard. Alaobix Labs begins R&D on internal tooling.",
+        ],
+        [
+          "2025",
+          "120+ clients served — and we still review every pull request like it\u2019s our first.",
+        ],
+      ];
+
+      const POSTS = [
+        {
+          slug: "hand-coded-websites",
+          title: "Why we still hand-code most of our websites",
+          category: "Engineering",
+          date: "Mar 4, 2025",
+          read: 7,
+          seed: "post-handcode",
+          author: "Marta Oliveira",
+          role: "Founder & Technical Director",
+          aseed: "marta",
+          excerpt:
+            "Page builders are fine — until they\u2019re not. On when hand-crafted HTML still wins, and what it costs (and saves) you.",
+          body: [
+            {
+              t: "p",
+              x: "Most of the websites we ship at Alaobix are still written by hand. In 2025. With page builders promising launch weekends and theme marketplaces promising done-for-you design, that sounds stubborn — because it is. But it is stubbornness with receipts.",
+            },
+            { t: "h2", x: 'What "hand-coded" actually means' },
+            {
+              t: "p",
+              x: "It does not mean we enjoy typing angle brackets. It means every byte that reaches your user exists for a reason: the fonts subset to the glyphs you use, the images sized to the layouts that render them, the JavaScript earning its download in interaction, not decoration.",
+            },
+            {
+              t: "code",
+              file: "budget.js",
+              x: "// every build gets a performance budget\nconst budget = { lcp: '1.2s', cls: '0.05', js: '90kb' };\n\nexport function enforce(site) {\n  if (site.metrics.lcp > budget.lcp) {\n    throw new Error('This build is not shipping.');\n  }\n}",
+            },
+            {
+              t: "p",
+              x: 'A budget like this makes decisions early, while they are cheap. When the limit is hit, the conversation is "which library leaves", not "which user suffers". Builders invert that: the bloat ships by default and the suffering is distributed silently.',
+            },
+            { t: "h2", x: "When we don\u2019t hand-code" },
+            {
+              t: "p",
+              x: "Honesty time — there are cases where speed of iteration beats everything:",
+            },
+            {
+              t: "ul",
+              x: [
+                "Throwaway campaign prototypes that live for a fortnight",
+                "Internal tools with an audience of eleven people",
+                "A/B test variants that may not survive the week",
+              ],
+            },
+            { t: "q", x: "The tool is irrelevant. The discipline isn\u2019t." },
+            {
+              t: "p",
+              x: "If a builder can respect your performance budget and brand system, use it. Our experience is that, past a certain level of ambition, it can\u2019t — and that\u2019s the moment hiring hands like ours stops being a luxury and starts being arithmetic.",
+            },
+          ],
+        },
+        {
+          slug: "design-tokens",
+          title: "Design tokens: one source of truth for your brand",
+          category: "Design",
+          date: "Feb 18, 2025",
+          read: 5,
+          seed: "post-tokens",
+          author: "Sofia Lindqvist",
+          role: "Design Lead",
+          aseed: "sofia",
+          excerpt:
+            "Colors, spacing, type, motion — a single set of decisions that keeps design and code from drifting apart.",
+          body: [
+            {
+              t: "p",
+              x: "Every product team we meet has the same ghost story: the brand guide says one blue, the app renders three, and nobody knows which one the marketing site uses. The fix is unglamorous and total: design tokens.",
+            },
+            { t: "h2", x: "One decision, referenced everywhere" },
+            {
+              t: "p",
+              x: 'A token is a named decision — "this is our primary action color" — stored once and referenced everywhere. In CSS it looks almost too simple to matter:',
+            },
+            {
+              t: "code",
+              file: "tokens.css",
+              x: ":root {\n  --color-primary: #FF5A1F;\n  --space-6: 1.5rem;\n  --radius-card: 16px;\n}\n\n.button {\n  background: var(--color-primary);\n  border-radius: var(--radius-card);\n}",
+            },
+            {
+              t: "p",
+              x: "That small indirection is what makes them powerful. Change the decision once, and the button, the focus ring, the chart line and the error highlight all follow. (This very website does it for its whole accent system — try the theme switcher in the corner.)",
+            },
+            { t: "h2", x: "Where teams go wrong" },
+            {
+              t: "ul",
+              x: [
+                "Naming tokens after their value (--orange) instead of their purpose (--color-action)",
+                "Keeping a Figma library and a code library with no mechanism tying them together",
+                "Token sprawl: 400 variables nobody dares delete",
+              ],
+            },
+            {
+              t: "p",
+              x: "Start small, name by purpose, and let the system earn its size. Your future designers — and your future self — inherit either a dictionary or a landfill.",
+            },
+          ],
+        },
+        {
+          slug: "medlink-case",
+          title: "Shipping a HIPAA-ready platform in 14 weeks",
+          category: "Engineering",
+          date: "Feb 3, 2025",
+          read: 9,
+          seed: "post-medlink",
+          author: "Daniel Reyes",
+          role: "Head of Engineering",
+          aseed: "daniel",
+          excerpt:
+            "A patient portal for 40 clinics, HIPAA-ready in fourteen weeks. Here is the plan that made it possible.",
+          body: [
+            {
+              t: "p",
+              x: 'When Medlink asked us for a patient portal serving forty clinics, the conversation lasted twenty minutes before someone said the quiet part: "We\u2019ve been quoted eighteen months by two vendors." We shipped in fourteen weeks. This is how.',
+            },
+            { t: "h2", x: "Three constraints, named up front" },
+            {
+              t: "ul",
+              x: [
+                "HIPAA compliance from the first commit — not an audit retrofit",
+                "Existing clinic workflows could not be retrained, only removed of friction",
+                "Accessibility mattered more than aesthetics — patients of every age and ability",
+              ],
+            },
+            {
+              t: "p",
+              x: "Naming constraints early is the whole trick. Every architecture decision got scored against those three lines, which killed about a dozen clever ideas before they could become expensive ones.",
+            },
+            {
+              t: "p",
+              x: "We ran the build in weekly increments visible to clinic staff, used their complaints as the acceptance criteria, and automated the compliance surface — audit logs, access rules, encryption at rest — into the CI pipeline so it could not silently regress.",
+            },
+            {
+              t: "q",
+              x: "Security you add later is a costume. Security you build in is a skeleton.",
+            },
+            {
+              t: "p",
+              x: "Fourteen weeks later, forty clinics switched in a single weekend with a support queue quieter than the old system\u2019s Tuesday.",
+            },
+          ],
+        },
+        {
+          slug: "wordpress-theme-costs",
+          title: "The hidden costs of cheap WordPress themes",
+          category: "Strategy",
+          date: "Jan 21, 2025",
+          read: 6,
+          seed: "post-wp",
+          author: "Tomás Ferreira",
+          role: "Senior Full-stack Developer",
+          aseed: "tomas",
+          excerpt:
+            "That €59 theme looks cheap until you count the plugin subscriptions, the four-second loads and the rescue project.",
+          body: [
+            {
+              t: "p",
+              x: 'We keep meeting the same client. They bought a €59 theme in 2022, "saved" the design budget, and are now paying us to fix what it quietly cost them. The invoice for the rescue is usually ten times the theme. Here is the itemized version of that math.',
+            },
+            { t: "h2", x: "The real bill arrives later" },
+            {
+              t: "ul",
+              x: [
+                "Plugin licenses: the demo site needs eleven subscriptions, renewing annually, forever",
+                "Performance: bundled-everything architectures ship 2–3 MB of JavaScript the page never asked for",
+                "Lock-in: shortcodes and builder markup that make leaving harder than staying",
+                "Security: abandoned bundled plugins are the number one real-world breach vector we see",
+              ],
+            },
+            {
+              t: "p",
+              x: "None of this is visible on the ThemeForest preview page, which is precisely the point. The preview is a demo; your website is a business asset with a five-year horizon.",
+            },
+            {
+              t: "p",
+              x: "A hand-built theme costs more on day one and less on every day after. When a theme is genuinely right — small site, standard patterns, tight budget — we say so. But go in with the full price list, not the sticker.",
+            },
+          ],
+        },
+        {
+          slug: "web-vitals-business-metric",
+          title: "Core Web Vitals are a business metric, not a tech metric",
+          category: "Strategy",
+          date: "Jan 9, 2025",
+          read: 5,
+          seed: "post-vitals",
+          author: "Marta Oliveira",
+          role: "Founder & Technical Director",
+          aseed: "marta",
+          excerpt:
+            "LCP, CLS and INP are not vanity charts. Here is the revenue math that convinced a skeptical board.",
+          body: [
+            {
+              t: "p",
+              x: 'The board meeting went the way these things go: "speed is a nice-to-have; the roadmap is full." So we stopped presenting milliseconds and presented money. The conversion curve for a site that loads in under a second versus over two is not subtle — and it compounds across every campaign you run.',
+            },
+            {
+              t: "p",
+              x: "Measuring it properly is refreshingly boring. The field data your actual users generate beats any lab simulation:",
+            },
+            {
+              t: "code",
+              file: "field.js",
+              x: "// real-user LCP, straight from the browser\nnew PerformanceObserver(list => {\n  for (const entry of list.getEntries()) {\n    report('lcp', entry.startTime);\n  }\n}).observe({ type: 'largest-contentful-paint', buffered: true });",
+            },
+            {
+              t: "p",
+              x: "We piped ninety days of that data against checkout analytics and drew the line: every 100ms of LCP improvement tracked with a measurable lift in completed orders. The roadmap unblocked itself.",
+            },
+            {
+              t: "q",
+              x: "Nobody budgets for milliseconds. Everybody budgets for conversion.",
+            },
+          ],
+        },
+        {
+          slug: "remote-design-sprints",
+          title: "How we run design sprints with remote clients",
+          category: "Design",
+          date: "Dec 12, 2024",
+          read: 4,
+          seed: "post-sprints",
+          author: "Amara Chen",
+          role: "UX Research Lead",
+          aseed: "amara",
+          excerpt:
+            "Our four-day remote sprint format — async by default, recordings over meetings, prototypes over promises.",
+          body: [
+            {
+              t: "p",
+              x: "The classic design sprint assumes a room, a wall of sticky notes and five consecutive days of shared calendar. Our clients are remote-first across four time zones, so we rebuilt the format around attention instead of presence.",
+            },
+            { t: "h2", x: "The four-day rhythm" },
+            {
+              t: "ul",
+              x: [
+                "Day 1 — async: recorded problem framing, a Miro board everyone annotates on their own morning",
+                "Day 2 — live 90 minutes: sketch critique, decisions made on camera, everything else stays async",
+                "Day 3 — we build the prototype; clients watch a two-minute progress video if they want",
+                "Day 4 — user testing, recorded; a 30-minute findings call ends the sprint with a decision, not a document",
+              ],
+            },
+            {
+              t: "p",
+              x: "Total synchronous commitment: under four hours across the week. Decisions per sprint: more than the five-day format ever gave us, because writing forces clarity in a way that meetings let you postpone.",
+            },
+          ],
+        },
+        {
+          slug: "vantage-api-rebuild",
+          title: "From monolith to modular: rebuilding Vantage\u2019s API",
+          category: "Engineering",
+          date: "Nov 28, 2024",
+          read: 8,
+          seed: "post-vantage",
+          author: "Daniel Reyes",
+          role: "Head of Engineering",
+          aseed: "daniel",
+          excerpt:
+            "How we took Vantage from a three-week release cycle to nine deploys a day — without rewriting everything.",
+          body: [
+            {
+              t: "p",
+              x: 'Vantage\u2019s analytics platform had one deployable artifact, one release train, and one three-week cycle that everyone feared. The ask was "modernize it". The honest translation: reduce the cost of change. We resisted the rewrite instinct and went modular instead.',
+            },
+            { t: "h2", x: "Untangling the monolith" },
+            {
+              t: "p",
+              x: "We drew the module boundaries along team conversations, not database tables — a service boundary nobody talks across is worth ten clean UML diagrams. Then we put the deploy pipeline behind an abstraction the whole team could reason about:",
+            },
+            {
+              t: "code",
+              file: "pipeline.js",
+              x: "// before: one deploy, everything holds hands\ndeploy('monolith');\n\n// after: independent, observable, reversible\nfor (const service of services) {\n  const result = await deploy(service, {\n    canary: true,\n    rollbackOn: ['5xx-rate', 'p95-latency'],\n  });\n  if (!result.healthy) break;\n}",
+            },
+            {
+              t: "p",
+              x: "Canary releases with automatic rollback did more for deploy confidence than any amount of process documentation. Fear, it turns out, was the actual architecture problem.",
+            },
+            {
+              t: "q",
+              x: "You do not modernize a codebase. You modernize the cost of changing it.",
+            },
+            {
+              t: "p",
+              x: "Six months later: nine deploys a day, same team, and the release train is a museum piece they keep screenshotting for onboarding slides.",
+            },
+          ],
+        },
+        {
+          slug: "pricing-design-honestly",
+          title: "Pricing design work honestly",
+          category: "Company",
+          date: "Nov 7, 2024",
+          read: 6,
+          seed: "post-pricing",
+          author: "Lucas Brandt",
+          role: "Delivery Lead",
+          aseed: "lucas",
+          excerpt:
+            "Why we stopped estimating in hours, started pricing in outcomes, and sleep better for it.",
+          body: [
+            {
+              t: "p",
+              x: "For our first three years we sold hours, like most agencies. The result was predictable: estimates became negotiation theater, clients policed timesheets, and the best work — the kind where someone disappears into a flow state for a day — looked, on paper, like theft.",
+            },
+            {
+              t: "q",
+              x: "An hour is a terrible unit of value. Nobody has ever been happy because a designer billed them exactly 7.5 hours.",
+            },
+            { t: "h2", x: "What we changed" },
+            {
+              t: "ul",
+              x: [
+                "Every engagement is priced against a named outcome, defined in writing before money moves",
+                "Estimates carry ranges with confidence levels, not single numbers that become promises",
+                'When scope changes, the conversation is "which outcome changes", never "whose afternoon is this"',
+              ],
+            },
+            {
+              t: "p",
+              x: "Clients worried this would be more expensive. Across two years, project margins stabilized, change-order fights vanished, and the average engagement length doubled. Honest pricing, it turns out, is also the stickiest pricing.",
+            },
+          ],
+        },
+        {
+          slug: "accessibility-not-a-feature",
+          title: "Accessibility is not a feature",
+          category: "Design",
+          date: "Oct 22, 2024",
+          read: 5,
+          seed: "post-a11y",
+          author: "Sofia Lindqvist",
+          role: "Design Lead",
+          aseed: "sofia",
+          excerpt:
+            "Your accessibility overlay is a lawsuit magnet. Real a11y is cheaper than the settlement.",
+          body: [
+            {
+              t: "p",
+              x: 'A prospect recently showed us their new accessibility overlay — the widget that promises compliance in one line of script. Their next sentence was the important one: "But our lawyer says we\u2019re still being sued." Overlays do not fix accessibility problems. They install a layer that attempts to translate broken interfaces, badly, for people who already have better tools.',
+            },
+            { t: "h2", x: "The business case nobody makes" },
+            {
+              t: "ul",
+              x: [
+                "~1 in 5 users has a situational or permanent disability at any given time",
+                "Accessible interfaces score higher for every user — the curb-cut effect is real and measured",
+                "Procurement teams increasingly ask for VPATs; enterprise sales die quietly without them",
+              ],
+            },
+            {
+              t: "p",
+              x: "Building accessible interfaces is not charity and it is not a feature toggle. It is baseline competence, and it is dramatically cheaper when it starts at the wireframe instead of the lawsuit.",
+            },
+            {
+              t: "q",
+              x: "If your design only works for users with perfect vision, a mouse and a quiet room — that is a demo, not a product.",
+            },
+          ],
+        },
+        {
+          slug: "scaling-to-24",
+          title: "What we learned scaling to 24 people",
+          category: "Company",
+          date: "Oct 3, 2024",
+          read: 7,
+          seed: "post-scaling",
+          author: "Marta Oliveira",
+          role: "Founder & Technical Director",
+          aseed: "marta",
+          excerpt:
+            "Hiring, rituals and mistakes from growing a studio from two founders to twenty-four people.",
+          body: [
+            {
+              t: "p",
+              x: "Two of us started Alaobix in an attic with a stubborn idea. Twenty-four of us run it now, and the interesting part is not the number — it is how little of what mattered at two people scaled, and how much of what we resisted turned out to be the point.",
+            },
+            { t: "h2", x: "What actually scaled" },
+            {
+              t: "ul",
+              x: [
+                "Writing everything down: decisions, rationale, and the disagreements — our internal docs are the real org chart",
+                "Senior-only hiring, slowly: every hire we rushed taught us a quarter\u2019s worth of lessons",
+                "Saying no on purpose: we grew revenue more by declining projects than by winning them",
+              ],
+            },
+            {
+              t: "p",
+              x: 'What did not scale: heroics. The all-night launch, the founder who reviews everything, the "we\u2019ll figure it out" energy that boots a company and burns a 24-person studio. Replacing heroics with process felt like losing our soul for about six months. Then delivery stopped depending on anyone\u2019s bad week — including ours.',
+            },
+            {
+              t: "p",
+              x: "We are still a studio, not an agency-machine. The standard is still the attic\u2019s: build it as if we have to maintain it ourselves. It just takes more people to say it loudly enough now.",
+            },
+          ],
+        },
+      ];
+      const FEATURED_SLUG = "hand-coded-websites";
+      const POSTS_PER_PAGE = 6;
+
+      /* ================================================================
+       RENDERERS
+       ================================================================ */
+      const frame = (url, img) => `
+  <div class="rounded-2xl border border-ink/10 bg-white overflow-hidden" style="box-shadow:0 2px 6px rgba(24,22,20,.05),0 30px 64px -20px rgba(24,22,20,.2)">
+    <div class="flex items-center gap-2 px-4 py-2.5 border-b border-ink/[.06] bg-[#F5F4F1]">
+      <span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span><span class="w-2.5 h-2.5 rounded-full bg-ink/15"></span><span class="w-2.5 h-2.5 rounded-full bg-primary/50"></span>
+      <span class="ms-3 flex-1 max-w-[260px] rounded-md bg-white border border-ink/[.06] px-3 py-1 font-mono text-[11px] text-ink/40 truncate">${url}</span>
+    </div>${img}
+  </div>`;
+
+      /* --- Shared CTA banner --- */
+      function renderCTAs() {
+        $$("[data-cta]").forEach((m) => {
+          const title = m.dataset.ctaTitle || "Have a project in mind?";
+          const sub =
+            m.dataset.ctaSub ||
+            "Tell us what you\u2019re building. We\u2019ll reply within one business day — with questions worth answering.";
+          m.innerHTML = `
+    <div class="relative overflow-hidden rounded-[2rem] bg-ink text-white px-7 py-16 md:px-16 md:py-20 text-center reveal">
+      <div class="absolute -top-48 left-1/2 -translate-x-1/2 w-[560px] h-[560px] rounded-full bg-primary/25 blur-[140px] pointer-events-none" aria-hidden="true"></div>
+      <svg class="absolute top-8 start-8 w-8 h-8 text-white/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 7 4 12l4.5 5"/><path d="M15.5 7 20 12l-4.5 5"/></svg>
+      <svg class="absolute bottom-8 end-8 w-8 h-8 text-white/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 7 4 12l4.5 5"/><path d="M15.5 7 20 12l-4.5 5"/></svg>
+      <div class="relative">
+        <p class="font-mono text-[11px] uppercase tracking-[.3em] text-white/40">Free consultation</p>
+        <h2 class="mt-5 font-display font-bold tracking-tight leading-[1.08] text-3xl md:text-5xl">${title}</h2>
+        <p class="mt-5 text-white/60 text-lg max-w-xl mx-auto leading-relaxed">${sub}</p>
+        <div class="mt-9 flex flex-wrap gap-4 justify-center">
+          <a href="#/contact" data-magnetic="14" class="btn-primary">Book a free consultation ${icon("arrow", "w-4 h-4")}</a>
+          <a href="#/services" class="btn-ghost-dark">Explore services</a>
+        </div>
+        <p class="mt-7 font-mono text-xs text-white/35 uppercase tracking-[.2em]">No decks · No pressure · Avg. reply under 4 hours</p>
+      </div>
+    </div>`;
+        });
+      }
+
+      /* --- Home: services preview rows --- */
+      function serviceRow(s, big = false) {
+        return `
+  <a href="#/services/${s.slug}" class="srv-row group relative flex items-center gap-5 md:gap-8 border-t border-ink/10 ${big ? "py-8 md:py-9" : "py-6 md:py-7"} ${big ? "data-preview" : ""}" ${big ? `data-preview="${s.slug}"` : ""}>
+    <span class="font-mono text-sm text-primary font-medium w-7 shrink-0">${s.num}</span>
+    <span class="hidden sm:grid w-12 h-12 shrink-0 rounded-xl place-items-center text-primary" style="background:rgb(var(--color-primary-rgb)/.09)">${icon(s.icon, "w-5 h-5")}</span>
+    <span class="flex-1 min-w-0">
+      <span class="block font-display font-semibold tracking-tight ${big ? "text-2xl md:text-4xl" : "text-xl md:text-2xl"} group-hover:text-primary transition-colors duration-300">${s.title}</span>
+      <span class="mt-1 block text-ink/55 ${big ? "md:text-lg" : ""} leading-snug">${s.short}</span>
+    </span>
+    <span class="shrink-0 w-11 h-11 rounded-full border border-ink/12 grid place-items-center text-ink/60 transition-all duration-300 group-hover:bg-primary group-hover:border-primary group-hover:text-white group-hover:-rotate-45">${icon("arrow", "w-4 h-4")}</span>
+  </a>`;
+      }
+      $("#homeServices").innerHTML =
+        SERVICES.slice(0, 3)
+          .map((s) => serviceRow(s, true))
+          .join("") + `<div class="border-t border-ink/10"></div>`;
+
+      /* --- Home: portfolio --- */
+      $("#homePortfolio").innerHTML = PROJECTS.slice(0, 3)
+        .map(
+          (p, i) => `
+  <article class="reveal group flex flex-col ${i % 2 ? "lg:flex-row-reverse" : ""} lg:flex-row gap-10 lg:gap-16 items-center">
+    <div class="lg:w-[56%] relative">
+      ${frame(
+        `${p.client.toLowerCase().replace(/\s/g, "")}.com`,
+        `
+        <div class="overflow-hidden">
+          <img loading="lazy" src="https://picsum.photos/seed/alaobix-${p.slug}/1100/720.jpg" alt="${p.client} — ${p.title}" class="w-full aspect-[11/7] object-cover group-hover:scale-[1.04] transition-transform duration-700"/>
+        </div>`,
+      )}
+      <div class="absolute -bottom-7 ${i % 2 ? "lg:-start-8" : "lg:-end-8"} -start-4 end-4 sm:end-auto sm:start-4 lg:start-4 card px-5 py-4 flex items-center gap-4">
+        <span class="font-display text-3xl font-bold text-primary tracking-tight">${p.stat}</span>
+        <span class="text-xs text-ink/55 leading-snug w-32">${p.statLabel}</span>
+      </div>
+    </div>
+    <div class="lg:w-[44%] pt-10 lg:pt-0">
+      <p class="font-mono text-xs uppercase tracking-[.2em] text-ink/45">${p.client} · ${p.year}</p>
+      <h3 class="mt-3 font-display font-bold tracking-tight leading-[1.15] text-2xl md:text-[1.9rem]">${p.title}</h3>
+      <p class="mt-4 text-ink/60 leading-relaxed">${p.desc}</p>
+      <div class="mt-5 flex flex-wrap gap-2">${p.tags.map((t) => `<span class="chip">${SERVICES.find((s) => s.slug === t)?.title.split(" ")[0] || t}</span>`).join("")}</div>
+      <a href="#/${p.link}" class="mt-7 inline-flex items-center gap-2 font-display font-semibold text-ink hover:text-primary transition-colors">
+        ${p.linkLabel || "Read the case study"} <span class="w-7 h-7 rounded-full border border-ink/15 grid place-items-center group-hover:border-primary">${icon("arrow", "w-3.5 h-3.5")}</span>
+      </a>
+    </div>
+  </article>`,
+        )
+        .join("");
+
+      /* --- Home: testimonials slider --- */
+      $("#testiWrap").innerHTML = `
+  <div class="text-center">
+    <div class="font-display text-7xl text-primary leading-[.6] select-none" aria-hidden="true">“</div>
+    <div class="overflow-hidden -mx-2">
+      <div id="testiTrack" class="flex transition-transform duration-700" style="transition-timing-function:cubic-bezier(.16,1,.3,1)">
+        ${TESTIMONIALS.map(
+          (t) => `
+        <figure class="w-full shrink-0 px-2">
+          <blockquote class="font-display text-xl md:text-[1.7rem] font-medium leading-snug tracking-tight">${t.q}</blockquote>
+          <figcaption class="mt-9 flex items-center justify-center gap-4">
+            <img src="https://picsum.photos/seed/alaobix-${t.seed}/96/96.jpg" alt="" class="w-12 h-12 rounded-full object-cover ring-2 ring-primary/40"/>
+            <div class="text-start"><div class="font-semibold">${t.name}</div><div class="text-sm text-ink/50">${t.role}</div></div>
+          </figcaption>
+        </figure>`,
+        ).join("")}
+      </div>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-6">
+      <button id="testiPrev" class="w-11 h-11 rounded-full border border-ink/12 grid place-items-center text-ink/60 hover:border-primary hover:text-primary transition-colors" aria-label="Previous testimonial">${icon("chevR", "w-4 h-4")}</button>
+      <div class="flex items-center gap-2.5" id="testiDots" role="tablist" aria-label="Testimonials"></div>
+      <button id="testiNext" class="w-11 h-11 rounded-full border border-ink/12 grid place-items-center text-ink/60 hover:border-primary hover:text-primary transition-colors" aria-label="Next testimonial">${icon("chevL", "w-4 h-4")}</button>
+      <span id="testiCount" class="font-mono text-xs text-ink/45 ms-2"></span>
+    </div>
+  </div>`;
+
+      /* --- Home: blog preview --- */
+      const postCard = (p, i = 0, cls = "") => `
+  <a href="#/blog/${p.slug}" class="card card-hover overflow-hidden group block reveal ${cls}" style="--d:${(i % 3) * 100}ms">
+    <div class="overflow-hidden">
+      <img loading="lazy" src="https://picsum.photos/seed/alaobix-${p.seed}/640/400.jpg" alt="" class="w-full aspect-[16/10] object-cover group-hover:scale-[1.05] transition-transform duration-700"/>
+    </div>
+    <div class="p-6">
+      <div class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-ink/45"><span class="text-primary">${p.category}</span><span>·</span><span>${p.read} min read</span></div>
+      <h3 class="mt-3 font-display text-xl font-semibold tracking-tight leading-snug group-hover:text-primary transition-colors">${p.title}</h3>
+      <p class="mt-2.5 text-sm text-ink/55 leading-relaxed line-clamp-2">${p.excerpt}</p>
+      <div class="mt-5 flex items-center gap-2.5">
+        <img src="https://picsum.photos/seed/alaobix-${p.aseed}/56/56.jpg" alt="" class="w-7 h-7 rounded-full object-full"/>
+        <span class="text-sm text-ink/60">${p.author}</span>
+        <span class="ms-auto font-mono text-xs text-ink/40">${p.date}</span>
+      </div>
+    </div>
+  </a>`;
+      $("#homeBlog").innerHTML = POSTS.slice(0, 3)
+        .map((p, i) =>
+          postCard(p, i, i === 1 ? "md:mt-10" : i === 2 ? "md:mt-20" : ""),
+        )
+        .join("");
+
+      /* --- About: team & timeline --- */
+      $("#aboutTeam").innerHTML = TEAM.map(
+        (m, i) => `
+  <div class="reveal group ${i % 3 === 1 ? "md:mt-8" : ""} ${i % 2 === 1 ? "lg:mt-6" : ""}" style="--d:${(i % 6) * 70}ms">
+    <div class="overflow-hidden rounded-2xl">
+      <img loading="lazy" src="https://picsum.photos/seed/alaobix-${m[3]}/420/500.jpg" alt="Portrait of ${m[0]}" class="w-full aspect-[4/5] object-cover saturate-[.85] group-hover:saturate-100 group-hover:scale-[1.04] transition-all duration-500"/>
+    </div>
+    <p class="mt-4 font-display font-semibold tracking-tight group-hover:text-primary transition-colors">${m[0]}</p>
+    <p class="text-sm text-ink/50">${m[1]}</p>
+    <p class="mt-1.5 text-xs text-ink/40 leading-relaxed">${m[2]}</p>
+  </div>`,
+      ).join("");
+
+      $("#aboutTimeline").innerHTML = TIMELINE.map(
+        (t, i) => `
+  <div class="reveal relative ps-10 md:ps-14 pb-10 ${i === TIMELINE.length - 1 ? "pb-0" : ""}" style="--d:${i * 90}ms">
+    <span class="absolute start-0 top-1.5 w-3.5 h-3.5 rounded-full border-[3px] bg-paper" style="border-color:var(--color-primary)"></span>
+    ${i < TIMELINE.length - 1 ? `<span class="absolute start-[6px] top-6 bottom-0 w-px bg-ink/15" aria-hidden="true"></span>` : ""}
+    <p class="font-mono text-sm text-primary">${t[0]}</p>
+    <p class="mt-1.5 text-ink/70 leading-relaxed md:text-lg">${t[1]}</p>
+  </div>`,
+      ).join("");
+
+      /* --- Services page: full index list --- */
+      $("#servicesList").innerHTML =
+        SERVICES.map(
+          (s) => `
+  <a href="#/services/${s.slug}" class="srv-row group relative flex items-center gap-6 md:gap-10 border-t border-ink/10 py-8 md:py-10 px-2 md:px-4 -mx-2 md:-mx-4 transition-colors duration-300 hover:bg-white" data-preview="${s.slug}">
+    <span class="font-mono text-sm md:text-base text-primary font-medium w-8 shrink-0">${s.num}</span>
+    <span class="flex-1 min-w-0">
+      <span class="block font-display font-semibold tracking-tight text-2xl md:text-4xl group-hover:text-primary group-hover:-translate-x-2 transition-all duration-300">${s.title}</span>
+      <span class="mt-2 block text-ink/55 md:text-lg leading-snug max-w-2xl">${s.short}</span>
+      <span class="mt-3 hidden md:flex flex-wrap gap-x-3 font-mono text-[11px] uppercase tracking-wider text-ink/40">${s.tags.map((t) => `<span>${t}</span>`).join('<span class="text-primary/40">·</span>')}</span>
+    </span>
+    <span class="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full border border-ink/12 grid place-items-center text-ink/60 transition-all duration-300 group-hover:bg-primary group-hover:border-primary group-hover:text-white group-hover:-rotate-45">${icon("arrow", "w-5 h-5")}</span>
+  </a>`,
+        ).join("") + `<div class="border-t border-ink/10"></div>`;
+
+      /* --- Services page: comparison table --- */
+      const CMP = [
+        ["Senior engineers only", 2, 1, 0],
+        ["Performance guarantee", 2, 0, 1],
+        ["You own all the code", 2, 1, 1],
+        ["Weekly working demos", 2, 0, 1],
+        ["Post-launch support", 2, 1, 0],
+        ["No lock-in, ever", 2, 0, 1],
+      ];
+      const cmpIcon = (v) =>
+        v === 2
+          ? `<span class="w-6 h-6 rounded-full grid place-items-center text-white" style="background:var(--color-primary)">${icon("check", "w-3.5 h-3.5")}</span>`
+          : `<span class="w-6 h-6 rounded-full grid place-items-center border border-ink/15 text-ink/30">${icon("x", "w-3.5 h-3.5")}</span>`;
+      $("#compareBody").innerHTML =
+        CMP.map(
+          (r) => `
+  <tr class="border-b border-ink/[.07]">
+    <td class="py-4 pe-6 font-medium">${r[0]}</td>
+    <td class="py-4 px-6" style="background:rgb(var(--color-primary-rgb)/.07)">${cmpIcon(r[1])}</td>
+    <td class="py-4 px-6">${cmpIcon(r[2])}</td>
+    <td class="py-4 px-6">${cmpIcon(r[3])}</td>
+  </tr>`,
+        ).join("") +
+        `
+  <tr><td></td><td class="pt-6 px-6" style="background:rgb(var(--color-primary-rgb)/.07)"><a href="#/contact" class="btn-primary btn-sm">Work with us ${icon("arrow", "w-3.5 h-3.5")}</a></td><td colspan="2"></td></tr>`;
+
+      /* --- Footer services links --- */
+      $("#footerServices").innerHTML = SERVICES.map(
+        (s) =>
+          `<li><a href="#/services/${s.slug}" class="hover:text-primary transition-colors">${s.title}</a></li>`,
+      ).join("");
+
+      /* --- Single service page --- */
+      function renderService(slug) {
+        const s = SERVICES.find((x) => x.slug === slug);
+        if (!s) {
+          location.hash = "#/services";
+          return null;
+        }
+        const cases = PROJECTS.filter((p) => p.tags.includes(s.slug)).slice(
+          0,
+          2,
+        );
+
+        $("#svc-hero").innerHTML = `
+  <div class="relative pt-32 lg:pt-40 pb-20 overflow-hidden">
+    <div class="absolute -top-24 end-[10%] w-[480px] h-[480px] rounded-full bg-primary/14 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+    <div class="container-x relative reveal">
+      <nav class="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink/40" aria-label="Breadcrumb">
+        <a href="#/services" class="hover:text-primary transition-colors">Services</a><span class="text-primary">/</span><span class="text-ink/60">${s.title}</span>
+      </nav>
+      <div class="mt-8 grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-8">
+          <span class="w-16 h-16 rounded-2xl grid place-items-center text-primary" style="background:rgb(var(--color-primary-rgb)/.09)">${icon(s.icon, "w-7 h-7")}</span>
+          <h1 class="mt-7 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.2rem,4.6vw,3.5rem)]">${s.title}</h1>
+          <p class="mt-6 text-lg md:text-xl text-ink/60 leading-relaxed max-w-2xl">${s.hero}</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#/contact" data-magnetic="12" class="btn-primary">Start this project ${icon("arrow", "w-4 h-4")}</a>
+            ${s.tiers ? `<button type="button" data-scroll="svc-tiers" class="btn-outline">See packages</button>` : ""}
+          </div>
+        </div>
+        <div class="lg:col-span-4 card p-6 lg:mt-4">
+          <p class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45">At a glance</p>
+          <ul class="mt-4 space-y-2.5">${s.tags.map((t) => `<li class="flex items-center gap-2.5 text-sm text-ink/70">${icon("check", "w-4 h-4 text-primary shrink-0")}${t}</li>`).join("")}</ul>
+          <p class="mt-5 pt-5 border-t border-ink/10 font-mono text-xs text-ink/45 uppercase tracking-wider">${s.pricingNote || (s.tiers ? "Packages from " + s.tiers[0].price.replace("from ", "") : "Custom quoted")}</p>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+        $("#svc-features").innerHTML = `
+  <section class="py-20 lg:py-24 bg-white border-y border-ink/[.06]">
+    <div class="container-x">
+      <div class="max-w-2xl reveal"><p class="eyebrow">What you get</p>
+      <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem]">The details that make the difference.</h2></div>
+      <div class="mt-12">
+        ${s.features
+          .map(
+            (f, i) => `
+        <div class="reveal grid md:grid-cols-12 gap-4 md:gap-8 items-start border-t border-ink/10 py-7" style="--d:${Math.min(i * 70, 280)}ms">
+          <span class="md:col-span-1 font-mono text-sm text-primary pt-1">${String(i + 1).padStart(2, "0")}</span>
+          <h3 class="md:col-span-4 font-display text-xl font-semibold tracking-tight">${f[0]}</h3>
+          <p class="md:col-span-7 text-ink/60 leading-relaxed">${f[1]}</p>
+        </div>`,
+          )
+          .join("")}
+        <div class="border-t border-ink/10"></div>
+      </div>
+    </div>
+  </section>`;
+
+        $("#svc-process").innerHTML = `
+  <section class="py-20 lg:py-24">
+    <div class="container-x grid lg:grid-cols-12 gap-14">
+      <div class="lg:col-span-4 reveal">
+        <p class="eyebrow">The process</p>
+        <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem] leading-[1.1]">How ${s.title.toLowerCase()} ships.</h2>
+        <p class="mt-5 text-ink/60 leading-relaxed">Same rhythm as everything we do: visible progress, no surprises.</p>
+      </div>
+      <div class="lg:col-span-8">
+        ${s.process
+          .map(
+            (p, i) => `
+        <div class="reveal relative ps-12 pb-9 ${i === s.process.length - 1 ? "pb-0" : ""}" style="--d:${i * 90}ms">
+          <span class="absolute start-0 top-0 w-9 h-9 rounded-full border border-ink/12 bg-white grid place-items-center font-mono text-xs text-primary">${String(i + 1).padStart(2, "0")}</span>
+          ${i < s.process.length - 1 ? `<span class="absolute start-[18px] top-10 bottom-0 border-s border-dashed border-ink/20" aria-hidden="true"></span>` : ""}
+          <h3 class="font-display text-lg font-semibold tracking-tight">${p[0]}</h3>
+          <p class="mt-1.5 text-ink/60 leading-relaxed">${p[1]}</p>
+        </div>`,
+          )
+          .join("")}
+      </div>
+    </div>
+  </section>`;
+
+        $("#svc-tiers").innerHTML = s.tiers
+          ? `
+  <section id="svc-tiers" class="py-20 lg:py-24 bg-white border-y border-ink/[.06] relative overflow-hidden">
+    <div class="absolute -top-24 start-[20%] w-[380px] h-[380px] rounded-full bg-primary/10 blur-[110px] pointer-events-none" aria-hidden="true"></div>
+    <div class="container-x relative">
+      <div class="text-center max-w-2xl mx-auto reveal"><p class="eyebrow inline-block">Packages</p>
+      <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem]">Pick a starting point.</h2>
+      <p class="mt-4 text-ink/60 text-lg">Every package is a beginning, not a ceiling — we tailor scope in the first call.</p></div>
+      <div class="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-5xl mx-auto">
+        ${s.tiers
+          .map(
+            (t, i) => `
+        <div class="reveal card card-hover p-7 relative flex flex-col ${t.featured ? "md:-mt-4 md:pb-11 border-primary/40" : ""}" style="--d:${i * 110}ms">
+          ${t.featured ? `<span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-wider text-white whitespace-nowrap" style="background:var(--color-primary)">Most popular</span>` : ""}
+          <p class="font-display font-semibold text-lg tracking-tight">${t.name}</p>
+          <p class="mt-1 text-sm text-ink/50">${t.forr}</p>
+          <p class="mt-5 font-mono text-2xl font-medium ${t.featured ? "text-primary" : ""}">${t.price}</p>
+          <ul class="mt-6 space-y-3 flex-1">
+            ${t.items.map((it) => `<li class="flex gap-3 text-sm text-ink/70 leading-relaxed">${icon("check", "w-4 h-4 text-primary shrink-0 mt-0.5")}${it}</li>`).join("")}
+          </ul>
+          <a href="#/contact" class="${t.featured ? "btn-primary" : "btn-outline"} w-full mt-7">${t.cta}</a>
+        </div>`,
+          )
+          .join("")}
+      </div>
+    </div>
+  </section>`
+          : s.pricingNote
+            ? `
+  <section class="py-16">
+    <div class="container-x">
+      <div class="reveal card p-8 md:p-10 flex flex-wrap items-center justify-between gap-6">
+        <div><p class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45">Investment</p>
+        <p class="mt-2 font-display text-2xl font-bold tracking-tight">${s.pricingNote}</p></div>
+        <a href="#/contact" class="btn-primary">Request a quote ${icon("arrow", "w-4 h-4")}</a>
+      </div>
+    </div>
+  </section>`
+            : "";
+
+        $("#svc-cases").innerHTML = cases.length
+          ? `
+  <section class="py-20 lg:py-24">
+    <div class="container-x">
+      <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+        <div><p class="eyebrow">Related work</p>
+        <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem]">Shipped with this service.</h2></div>
+        <a href="#/blog" class="font-display font-semibold text-ink hover:text-primary transition-colors inline-flex items-center gap-2 group">All case studies ${icon("arrow", "w-4 h-4 group-hover:-translate-x-1 transition-transform")}</a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        ${cases
+          .map(
+            (p, i) => `
+        <a href="#/${p.link}" class="reveal card card-hover overflow-hidden group block" style="--d:${i * 110}ms">
+          <div class="overflow-hidden"><img loading="lazy" src="https://picsum.photos/seed/alaobix-${p.slug}/800/460.jpg" alt="${p.client}" class="w-full aspect-[16/9] object-cover group-hover:scale-[1.04] transition-transform duration-700"/></div>
+          <div class="p-6">
+            <p class="font-mono text-xs uppercase tracking-[.2em] text-ink/45">${p.client} · ${p.year}</p>
+            <h3 class="mt-2.5 font-display text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">${p.title}</h3>
+            <p class="mt-2.5 text-sm text-ink/55 leading-relaxed line-clamp-2">${p.desc}</p>
+            <p class="mt-4 font-display font-bold text-2xl text-primary">${p.stat} <span class="text-sm font-body font-normal text-ink/45">${p.statLabel}</span></p>
+          </div>
+        </a>`,
+          )
+          .join("")}
+      </div>
+    </div>
+  </section>`
+          : "";
+
+        $("#svc-faq").innerHTML = `
+  <section class="py-20 lg:py-24 bg-white border-y border-ink/[.06]">
+    <div class="container-x grid lg:grid-cols-12 gap-14">
+      <div class="lg:col-span-4 reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem] leading-[1.1]">Asked before,<br/>answered here.</h2>
+        <p class="mt-5 text-ink/60 leading-relaxed">Something else on your mind? <a href="#/contact" class="text-primary font-semibold hover:underline">Ask us directly</a> — replies in under four business hours.</p>
+      </div>
+      <div class="lg:col-span-8">
+        ${s.faqs
+          .map(
+            (f, i) => `
+        <div class="faq-item reveal border-t border-ink/10 ${i === s.faqs.length - 1 ? "border-b" : ""}" style="--d:${i * 70}ms">
+          <button class="faq-btn w-full flex items-center justify-between gap-6 py-6 text-start" aria-expanded="false">
+            <span class="font-display font-semibold text-lg tracking-tight">${f[0]}</span>
+            <span class="faq-icon text-primary shrink-0">${icon("plus", "w-5 h-5")}</span>
+          </button>
+          <div class="faq-body"><div><p class="pb-6 text-ink/60 leading-relaxed">${f[1]}</p></div></div>
+        </div>`,
+          )
+          .join("")}
+      </div>
+    </div>
+  </section>`;
+        return s;
+      }
+
+      /* --- Blog list page --- */
+      const blogState = { cat: "all", page: 1 };
+      function renderBlog() {
+        const cats = ["all", "Engineering", "Design", "Strategy", "Company"];
+        const count = (c) =>
+          c === "all"
+            ? POSTS.length - 1
+            : POSTS.filter((p) => p.slug !== FEATURED_SLUG && p.category === c)
+                .length;
+        $("#filterTabs").innerHTML = cats
+          .map(
+            (c) => `
+    <button type="button" role="tab" aria-selected="${blogState.cat === c}" data-cat="${c}" class="tab ${blogState.cat === c ? "tab-active" : ""}">${c === "all" ? "All posts" : c}<sup class="ms-1.5 opacity-60">${count(c)}</sup></button>`,
+          )
+          .join("");
+
+        const featured =
+          blogState.cat === "all" && blogState.page === 1
+            ? POSTS.find((p) => p.slug === FEATURED_SLUG)
+            : null;
+        $("#featuredPost").innerHTML = featured
+          ? `
+  <a href="#/blog/${featured.slug}" class="card card-hover overflow-hidden group grid lg:grid-cols-2 reveal">
+    <div class="overflow-hidden min-h-[240px]">
+      <img loading="lazy" src="https://picsum.photos/seed/alaobix-${featured.seed}/1000/640.jpg" alt="" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"/>
+    </div>
+    <div class="p-7 md:p-10 flex flex-col justify-center">
+      <div class="flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-ink/45">
+        <span class="px-2.5 py-1 rounded-full text-white" style="background:var(--color-primary)">Featured</span>
+        <span class="text-primary">${featured.category}</span><span>·</span><span>${featured.read} min read</span>
+      </div>
+      <h2 class="mt-4 font-display font-bold tracking-tight leading-[1.12] text-2xl md:text-3xl group-hover:text-primary transition-colors">${featured.title}</h2>
+      <p class="mt-4 text-ink/60 leading-relaxed">${featured.excerpt}</p>
+      <div class="mt-6 flex items-center gap-3">
+        <img src="https://picsum.photos/seed/alaobix-${featured.aseed}/56/56.jpg" alt="" class="w-9 h-9 rounded-full object-cover"/>
+        <div><p class="text-sm font-semibold">${featured.author}</p><p class="text-xs text-ink/45">${featured.date}</p></div>
+        <span class="ms-auto w-10 h-10 rounded-full border border-ink/12 grid place-items-center text-ink/60 group-hover:bg-primary group-hover:border-primary group-hover:text-white group-hover:-rotate-45 transition-all duration-300">${icon("arrow", "w-4 h-4")}</span>
+      </div>
+    </div>
+  </a>`
+          : "";
+
+        const rest = POSTS.filter(
+          (p) =>
+            p.slug !== FEATURED_SLUG &&
+            (blogState.cat === "all" || p.category === blogState.cat),
+        );
+        const pages = Math.max(1, Math.ceil(rest.length / POSTS_PER_PAGE));
+        blogState.page = Math.min(blogState.page, pages);
+        const slice = rest.slice(
+          (blogState.page - 1) * POSTS_PER_PAGE,
+          blogState.page * POSTS_PER_PAGE,
+        );
+        $("#blogGrid").innerHTML = slice.length
+          ? slice.map((p, i) => postCard(p, i)).join("")
+          : `<p class="text-ink/50 col-span-full py-8">No posts in this category yet — check back soon.</p>`;
+
+        $("#blogPager").innerHTML =
+          pages > 1
+            ? `
+    <button type="button" class="page-btn" data-page="${blogState.page - 1}" ${blogState.page <= 1 ? "disabled" : ""} aria-label="Previous page">${icon("chevR", "w-4 h-4")}</button>
+    ${Array.from({ length: pages }, (_, i) => `<button type="button" class="page-btn ${blogState.page === i + 1 ? "page-btn-active" : ""}" data-page="${i + 1}">${i + 1}</button>`).join("")}
+    <button type="button" class="page-btn" data-page="${blogState.page + 1}" ${blogState.page >= pages ? "disabled" : ""} aria-label="Next page">${icon("chevL", "w-4 h-4")}</button>`
+            : "";
+      }
+      $("#filterTabs").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-cat]");
+        if (!b) return;
+        blogState.cat = b.dataset.cat;
+        blogState.page = 1;
+        renderBlog();
+      });
+      $("#blogPager").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-page]");
+        if (!b || b.disabled) return;
+        blogState.page = +b.dataset.page;
+        renderBlog();
+        $("#blogGrid").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      /* --- Single post page --- */
+      function renderPost(slug) {
+        const p = POSTS.find((x) => x.slug === slug);
+        if (!p) {
+          location.hash = "#/blog";
+          return null;
+        }
+        const related = POSTS.filter(
+          (x) => x.slug !== p.slug && x.category === p.category,
+        ).slice(0, 3);
+        if (related.length < 3)
+          related.push(
+            ...POSTS.filter(
+              (x) => x.slug !== p.slug && !related.includes(x),
+            ).slice(0, 3 - related.length),
+          );
+        const url = location.href;
+
+        const blocks = p.body
+          .map((b) => {
+            if (b.t === "p")
+              return `<p class="text-[1.075rem] leading-[1.85] text-ink/75 mb-7">${b.x}</p>`;
+            if (b.t === "h2")
+              return `<h2 class="font-display font-bold tracking-tight text-2xl md:text-[1.8rem] mt-12 mb-5">${b.x}</h2>`;
+            if (b.t === "q")
+              return `<blockquote class="my-10 ps-7 border-s-[3px] font-display text-xl md:text-2xl font-medium leading-relaxed" style="border-color:var(--color-primary)">${b.x}</blockquote>`;
+            if (b.t === "ul")
+              return `<ul class="mb-8 space-y-3.5">${b.x.map((li) => `<li class="flex gap-3.5 text-[1.05rem] leading-relaxed text-ink/75">${icon("check", "w-5 h-5 text-primary shrink-0 mt-1")}<span>${li}</span></li>`).join("")}</ul>`;
+            if (b.t === "code")
+              return `
+      <div class="codeblock my-9 rounded-xl overflow-hidden border border-ink/10" style="box-shadow:0 1px 2px rgba(24,22,20,.05),0 16px 40px -16px rgba(24,22,20,.2)">
+        <div class="flex items-center gap-2 px-4 py-2.5 bg-[#141312] text-white/50 font-mono text-xs">
+          <span class="w-2 h-2 rounded-full bg-white/15"></span><span class="w-2 h-2 rounded-full bg-white/15"></span><span class="w-2 h-2 rounded-full bg-primary/70"></span>
+          <span class="ms-2">${b.file}</span>
+          <button type="button" data-copy class="ms-auto flex items-center gap-1.5 hover:text-white transition-colors" aria-label="Copy code">${icon("copy", "w-3.5 h-3.5")}Copy</button>
+        </div>
+        <pre class="p-5 overflow-x-auto bg-[#1B1917] font-mono text-[13px] leading-[1.75] text-[#D6D3CD]"><code>${hl(b.x)}</code></pre>
+      </div>`;
+            return "";
+          })
+          .join("");
+
+        $("#postMount").innerHTML = `
+  <div class="pt-32 lg:pt-40 pb-24">
+    <div class="container-x">
+      <article id="postArticle">
+        <header class="max-w-3xl mx-auto text-center reveal">
+          <a href="#/blog/${p.slug}" class="inline-flex px-3.5 py-1.5 rounded-full font-mono text-[11px] uppercase tracking-wider text-white" style="background:var(--color-primary)">${p.category}</a>
+          <h1 class="mt-6 font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.9rem,4vw,3.1rem)]">${p.title}</h1>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm text-ink/55">
+            <span class="flex items-center gap-2.5"><img src="https://picsum.photos/seed/alaobix-${p.aseed}/64/64.jpg" alt="" class="w-9 h-9 rounded-full object-cover"/><span class="font-semibold text-ink">${p.author}</span></span>
+            <span class="flex items-center gap-1.5">${icon("calendar", "w-4 h-4 text-primary")}${p.date}</span>
+            <span class="flex items-center gap-1.5">${icon("clock", "w-4 h-4 text-primary")}${p.read} min read</span>
+          </div>
+        </header>
+        <div class="mt-12 max-w-5xl mx-auto reveal" style="--d:120ms">
+          <div class="rounded-3xl overflow-hidden" style="box-shadow:0 4px 10px rgba(24,22,20,.06),0 40px 80px -24px rgba(24,22,20,.25)">
+            <img src="https://picsum.photos/seed/alaobix-${p.seed}/1400/700.jpg" alt="" class="w-full aspect-[2/1] object-cover"/>
+          </div>
+        </div>
+        <div class="mt-14 max-w-[680px] mx-auto reveal" style="--d:200ms">
+          ${blocks}
+          <div class="mt-12 pt-8 border-t border-ink/10 flex flex-wrap items-center justify-between gap-5">
+            <p class="font-mono text-xs uppercase tracking-[.2em] text-ink/45">Share this article</p>
+            <div class="flex gap-2.5">
+              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(p.title)}" target="_blank" rel="noopener" aria-label="Share on X" class="w-10 h-10 rounded-full border border-ink/12 grid place-items-center text-ink/60 hover:border-primary hover:text-primary transition-colors">${icon("x", "w-4 h-4")}</a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="w-10 h-10 rounded-full border border-ink/12 grid place-items-center text-ink/60 hover:border-primary hover:text-primary transition-colors">${icon("linkedin", "w-4 h-4")}</a>
+              <button type="button" data-copy-link class="w-10 h-10 rounded-full border border-ink/12 grid place-items-center text-ink/60 hover:border-primary hover:text-primary transition-colors" aria-label="Copy link">${icon("copy", "w-4 h-4")}</button>
+            </div>
+          </div>
+          <div class="card p-7 md:p-8 mt-10 flex flex-wrap sm:flex-nowrap items-center gap-6">
+            <img src="https://picsum.photos/seed/alaobix-${p.aseed}/160/160.jpg" alt="Portrait of ${p.author}" class="w-20 h-20 rounded-2xl object-cover shrink-0"/>
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[.2em] text-ink/45">Written by</p>
+              <p class="mt-1 font-display font-bold text-xl tracking-tight">${p.author}</p>
+              <p class="text-sm text-ink/50">${p.role} at Alaobix</p>
+              <p class="mt-2.5 text-sm text-ink/60 leading-relaxed">Writes about the craft behind the shipped — engineering, design and the business decisions in between.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <section class="mt-24 pt-14 border-t border-ink/10">
+        <div class="flex items-end justify-between gap-6 mb-10 reveal">
+          <h2 class="font-display font-bold tracking-tight text-2xl md:text-3xl">Keep reading</h2>
+          <a href="#/blog" class="font-display font-semibold text-ink hover:text-primary transition-colors inline-flex items-center gap-2 group">All articles ${icon("arrow", "w-4 h-4 group-hover:-translate-x-1 transition-transform")}</a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          ${related
+            .slice(0, 3)
+            .map((r, i) => postCard(r, i))
+            .join("")}
+        </div>
+      </section>
+    </div>
+  </div>`;
+        return p;
+      }
+
+      /* ================================================================
+       MOTION & INTERACTION
+       ================================================================ */
+      /* --- Scroll reveals --- */
+      const revealIO = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              en.target.classList.add("in");
+              revealIO.unobserve(en.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -36px" },
+      );
+      const initReveal = (scope = document) =>
+        $$(".reveal:not(.in)", scope).forEach((el) => revealIO.observe(el));
+      initReveal();
+
+      /* --- Counters --- */
+      const counterIO = new IntersectionObserver(
+        (es) => {
+          es.forEach((en) => {
+            if (!en.isIntersecting) return;
+            counterIO.unobserve(en.target);
+            const el = en.target,
+              target = +el.dataset.count,
+              t0 = performance.now(),
+              dur = 1500;
+            (function tick(t) {
+              const p = Math.min(1, (t - t0) / dur),
+                e = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.round(target * e);
+              if (p < 1) requestAnimationFrame(tick);
+            })(t0);
+          });
+        },
+        { threshold: 0.6 },
+      );
+      $$("[data-count]").forEach((el) => counterIO.observe(el));
+
+      /* --- Magnetic buttons --- */
+      function initMagnetic(scope = document) {
+        if (!finePointer || reduced) return;
+        $$("[data-magnetic]:not(.mag-init)", scope).forEach((el) => {
+          el.classList.add("mag-init");
+          const strength = parseFloat(el.dataset.magnetic) || 14;
+          el.addEventListener("mousemove", (e) => {
+            const r = el.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) / (r.width / 2),
+              y = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+            el.style.transform = `translate(${x * strength}px, ${y * strength * 0.7}px)`;
+          });
+          el.addEventListener("mouseleave", () => {
+            el.style.transform = "";
+          });
+        });
+      }
+      initMagnetic();
+
+      /* --- Custom cursor --- */
+      if (finePointer && !reduced) {
+        const dot = $("#cursorDot"),
+          ring = $("#cursorRing");
+        let mx = innerWidth / 2,
+          my = innerHeight / 2,
+          rx = mx,
+          ry = my;
+        document.addEventListener("mousemove", (e) => {
+          mx = e.clientX;
+          my = e.clientY;
+          dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
+          document.body.classList.add("cursor-on");
+        });
+        document.addEventListener("mouseleave", () =>
+          document.body.classList.remove("cursor-on"),
+        );
+        (function loop() {
+          rx += (mx - rx) * 0.16;
+          ry += (my - ry) * 0.16;
+          ring.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`;
+          requestAnimationFrame(loop);
+        })();
+        document.addEventListener("mouseover", (e) => {
+          const t = e.target;
+          const interactive =
+            t.closest &&
+            t.closest(
+              "a, button, .srv-row, [data-magnetic], .dot, .swatch, summary",
+            );
+          const textual = t.closest && t.closest("input, textarea, select");
+          ring.classList.toggle("grow", !!interactive && !textual);
+          document.body.classList.toggle("custom-cursor", !textual);
+        });
+      } else {
+        document.body.classList.remove("custom-cursor");
+      }
+
+      /* --- Hero cursor-reactive parallax stage --- */
+      (function () {
+        const stage = $("#heroStage");
+        if (!stage) return;
+        if (!finePointer || reduced) return;
+        const layers = [...stage.querySelectorAll("[data-depth]")];
+        let tx = 0,
+          ty = 0,
+          cx = 0,
+          cy = 0;
+        stage.addEventListener("mousemove", (e) => {
+          const r = stage.getBoundingClientRect();
+          tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+          ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        });
+        stage.addEventListener("mouseleave", () => {
+          tx = 0;
+          ty = 0;
+        });
+        (function loop() {
+          cx += (tx - cx) * 0.06;
+          cy += (ty - cy) * 0.06;
+          layers.forEach((l) => {
+            const d = parseFloat(l.dataset.depth);
+            l.style.transform = `translate3d(${cx * d * 130}px, ${cy * d * 130}px, 0)`;
+          });
+          requestAnimationFrame(loop);
+        })();
+      })();
+
+      /* --- Nav scroll state --- */
+      const navEl = $("#siteNav");
+      addEventListener(
+        "scroll",
+        () => {
+          navEl.classList.toggle("scrolled", scrollY > 10);
+          /* reading progress */
+          const art = $("#postArticle");
+          const bar = $("#progressBar");
+          if (art && !$("#page-post").classList.contains("hidden")) {
+            const r = art.getBoundingClientRect(),
+              start = innerHeight * 0.55;
+            const prog = Math.min(1, Math.max(0, (start - r.top) / r.height));
+            bar.style.width = prog * 100 + "%";
+          } else bar.style.width = "0%";
+        },
+        { passive: true },
+      );
+
+      /* --- Mobile menu --- */
+      const menuBtn = $("#menuBtn"),
+        mobileMenu = $("#mobileMenu");
+      function setMenu(open) {
+        mobileMenu.classList.toggle("hidden", !open);
+        menuBtn.setAttribute("aria-expanded", open);
+        menuBtn.innerHTML = icon(open ? "x" : "menu", "w-5 h-5");
+        navEl.classList.toggle("scrolled", open || scrollY > 10);
+      }
+      menuBtn.addEventListener("click", () =>
+        setMenu(mobileMenu.classList.contains("hidden")),
+      );
+      $$(".mobile-link, #mobileMenu a").forEach((a) =>
+        a.addEventListener("click", () => setMenu(false)),
+      );
+
+      /* --- Testimonials slider --- */
+      (function () {
+        const track = $("#testiTrack");
+        if (!track) return;
+        const dots = $("#testiDots"),
+          n = TESTIMONIALS.length;
+        let i = 0,
+          timer = null;
+        dots.innerHTML = TESTIMONIALS.map(
+          (_, k) =>
+            `<button type="button" class="dot" role="tab" aria-label="Testimonial ${k + 1}"></button>`,
+        ).join("");
+        function go(k) {
+          i = (k + n) % n;
+          track.style.transform = `translateX(-${i * 100}%)`;
+          [...dots.children].forEach((d, j) => {
+            d.classList.toggle("dot-active", j === i);
+            d.setAttribute("aria-selected", j === i);
+          });
+          $("#testiCount").textContent =
+            `${String(i + 1).padStart(2, "0")} / ${String(n).padStart(2, "0")}`;
+        }
+        function start() {
+          if (!reduced) {
+            stop();
+            timer = setInterval(() => go(i + 1), 6000);
+          }
+        }
+        function stop() {
+          if (timer) clearInterval(timer);
+        }
+        $("#testiPrev").addEventListener("click", () => {
+          go(i - 1);
+          start();
+        });
+        $("#testiNext").addEventListener("click", () => {
+          go(i + 1);
+          start();
+        });
+        [...dots.children].forEach((d, k) =>
+          d.addEventListener("click", () => {
+            go(k);
+            start();
+          }),
+        );
+        const wrap = $("#testiWrap");
+        wrap.addEventListener("mouseenter", stop);
+        wrap.addEventListener("mouseleave", start);
+        start();
+        go(0);
+      })();
+
+      /* --- Delegated: FAQ, copy, scroll-to, share copy --- */
+      document.addEventListener("click", (e) => {
+        const faqBtn = e.target.closest(".faq-btn");
+        if (faqBtn) {
+          const item = faqBtn.closest(".faq-item");
+          const open = item.classList.toggle("open");
+          faqBtn.setAttribute("aria-expanded", open);
+          item.parentElement.querySelectorAll(".faq-item.open").forEach((o) => {
+            if (o !== item) {
+              o.classList.remove("open");
+              o.querySelector(".faq-btn").setAttribute(
+                "aria-expanded",
+                "false",
+              );
+            }
+          });
+          return;
+        }
+        const copyBtn = e.target.closest("[data-copy]");
+        if (copyBtn) {
+          const code =
+            copyBtn.closest(".codeblock")?.querySelector("code")?.innerText ||
+            "";
+          navigator.clipboard
+            ?.writeText(code)
+            .then(() => toast("Code copied to clipboard"))
+            .catch(() => toast("Copy not available in this context"));
+          return;
+        }
+        const linkBtn = e.target.closest("[data-copy-link]");
+        if (linkBtn) {
+          navigator.clipboard
+            ?.writeText(location.href)
+            .then(() => toast("Link copied to clipboard"))
+            .catch(() => toast("Copy not available in this context"));
+          return;
+        }
+        const scrollBtn = e.target.closest("[data-scroll]");
+        if (scrollBtn) {
+          const t = document.getElementById(scrollBtn.dataset.scroll);
+          if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+
+      /* --- Service hover preview (services index, desktop) --- */
+      (function () {
+        const list = $("#servicesList"),
+          prev = $("#srvPreview");
+        if (!list || !finePointer || reduced) return;
+        list.addEventListener("mousemove", (e) => {
+          prev.style.left = e.clientX + 28 + "px";
+          prev.style.top = e.clientY - 100 + "px";
+        });
+        $$(".srv-row[data-preview]", list).forEach((row) => {
+          row.addEventListener("mouseenter", () => {
+            const s = SERVICES.find((x) => x.slug === row.dataset.preview);
+            if (!s) return;
+            prev.innerHTML = `<img src="https://picsum.photos/seed/alaobix-${s.slug}/560/340.jpg" alt="" class="w-full aspect-[28/17] object-cover"/>
+        <div class="bg-ink text-white/90 px-4 py-3 flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-sm">${s.title}</span>
+          <span class="font-mono text-[10px] uppercase tracking-wider" style="color:var(--color-primary-light)">${s.num}</span>
+        </div>`;
+            prev.classList.add("on");
+          });
+        });
+        list.addEventListener("mouseleave", () => prev.classList.remove("on"));
+      })();
+
+      /* --- Forms (contact + newsletter) --- */
+      function validate(form) {
+        let ok = true;
+        $$("input, textarea", form).forEach((f) => {
+          const err = $(`[data-for="${f.id}"]`, form);
+          if (!err) return;
+          let bad = false;
+          if (f.hasAttribute("required") && !f.value.trim()) bad = true;
+          if (
+            f.type === "email" &&
+            f.value.trim() &&
+            !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.value)
+          )
+            bad = true;
+          if (
+            f.hasAttribute("minlength") &&
+            f.value.trim().length < +f.getAttribute("minlength")
+          )
+            bad = true;
+          err.classList.toggle("hidden", !bad);
+          f.classList.toggle("border-[#C4372F]", bad);
+          if (bad) ok = false;
+        });
+        return ok;
+      }
+      function wireForm(formId, successMsg) {
+        const form = $(formId);
+        if (!form) return;
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!validate(form)) {
+            toast("Please fix the highlighted fields.", "x");
+            return;
+          }
+          const btn = form.querySelector("button[type=submit]");
+          const label = btn.dataset.label;
+          btn.disabled = true;
+          btn.innerHTML = `${icon("loader", "w-4 h-4 animate-spin")}Sending…`;
+          setTimeout(() => {
+            toast(successMsg);
+            form.reset();
+            btn.disabled = false;
+            btn.innerHTML = `${label} ${icon("arrow", "w-4 h-4")}`;
+          }, 900);
+        });
+      }
+      wireForm(
+        "#contactForm",
+        "Message sent — we\u2019ll reply within one business day.",
+      );
+      wireForm(
+        "#newsForm",
+        "Subscribed — see you in your inbox next month.",
+        "mail",
+      );
+
+      /* ================================================================
+       ROUTER — hash-based, no reload
+       ================================================================ */
+      const PAGES = [
+        "home",
+        "about",
+        "services",
+        "service",
+        "blog",
+        "post",
+        "contact",
+      ];
+      const TITLES = {
+        home: "Alaobix — Web Design & Software Development Studio",
+        about: "About — Alaobix",
+        services: "Services — Alaobix",
+        blog: "Blog — Alaobix",
+        contact: "Contact — Alaobix",
+      };
+
+      function router() {
+        const hash = location.hash.replace(/^#\/?/, "");
+        const [a, b] = hash.split("/");
+        let page = "home",
+          title = TITLES.home;
+
+        if (a === "about") {
+          page = "about";
+          title = TITLES.about;
+        } else if (a === "contact") {
+          page = "contact";
+          title = TITLES.contact;
+        } else if (a === "services") {
+          if (b) {
+            const s = renderService(b);
+            if (!s) return;
+            page = "service";
+            title = `${s.title} — Alaobix`;
+          } else {
+            page = "services";
+            title = TITLES.services;
+          }
+        } else if (a === "blog") {
+          if (b) {
+            const p = renderPost(b);
+            if (!p) return;
+            page = "post";
+            title = `${p.title} — Alaobix`;
+          } else {
+            renderBlog();
+            page = "blog";
+            title = TITLES.blog;
+          }
+        } else if (a) {
+          location.hash = "#/";
+          return;
+        }
+
+        PAGES.forEach((p) => {
+          const el = $("#page-" + p);
+          if (el) el.classList.toggle("hidden", p !== page);
+        });
+        $("#progressBar").style.width = "0%";
+        try {
+          window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        } catch (e) {
+          scrollTo(0, 0);
+        }
+        document.title = title;
+
+        const routeKey = [
+          "home",
+          "about",
+          "services",
+          "blog",
+          "contact",
+        ].includes(page)
+          ? page
+          : page === "service"
+            ? "services"
+            : "blog";
+        $$(".nav-link").forEach((l) => {
+          const active = l.dataset.route === routeKey;
+          l.classList.toggle("active", active);
+          if (active) l.setAttribute("aria-current", "page");
+          else l.removeAttribute("aria-current");
+        });
+
+        initReveal($("#page-" + page));
+        initMagnetic($("#page-" + page));
+        setMenu(false);
+      }
+      renderCTAs();
+      addEventListener("hashchange", router);
+      router();
+      initMagnetic();
+    </script>
+  </body>
+</html>
