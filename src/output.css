@@ -1477,10 +1477,10 @@
     text-align: start;
   }
   .font-body {
-    font-family: Manrope, sans-serif;
+    font-family: Vazirmatn, sans-serif;
   }
   .font-display {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
   }
   .font-mono {
     font-family: "JetBrains Mono", monospace;
@@ -1833,9 +1833,6 @@
   }
   .saturate-\[\.85\] {
     --tw-saturate: saturate(.85);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition-all {
@@ -2261,7 +2258,7 @@
   }
   body {
     background-color: #FAF9F6;
-    font-family: Manrope, sans-serif;
+    font-family: Vazirmatn, sans-serif;
     color: #181614;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -2293,7 +2290,7 @@
     justify-content: center;
     gap: calc(var(--spacing) * 2.5);
     border-radius: calc(infinity * 1px);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     transition-property: all;
@@ -2313,7 +2310,7 @@
     background-color: var(--color-primary-value);
     padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 3.5);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-white);
@@ -2348,7 +2345,7 @@
     border-color: color-mix(in oklab, #181614 15%, transparent);
     padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 3.5);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: #181614;
@@ -2390,7 +2387,7 @@
     }
     padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 3.5);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-white);
@@ -2503,7 +2500,7 @@
   .nav-link {
     position: relative;
     padding-block: var(--spacing);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     font-size: 15px;
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -2580,7 +2577,7 @@
   }
   @keyframes marquee {
     to {
-      transform: translateX(50%);
+      transform: translateX(-50%);
     }
   }
   #cursorDot, #cursorRing {
