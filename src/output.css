@@ -2423,7 +2423,7 @@
     position: relative;
     padding-inline-start: calc(var(--spacing) * 9);
     font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
+    font-size: 12px;
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
     --tw-tracking: .25em;
