@@ -2577,7 +2577,7 @@
   }
   @keyframes marquee {
     to {
-      transform: translateX(-50%);
+      transform: translateX(50%);
     }
   }
   #cursorDot, #cursorRing {
