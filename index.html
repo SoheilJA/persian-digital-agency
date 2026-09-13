@@ -1961,8 +1961,10 @@ launch.ship(); <span class="c-com">// 6 weeks, zero drama</span></code></pre>
         linkedin:
           '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
       };
-      const icon = (name, cls = "w-5 h-5") =>
-        `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+      const icon = (name, cls = "w-5 h-5") => {
+        const flip = ["arrow", "chevL", "chevR"].includes(name) ? "rtl-flip" : "";
+        return `<svg class="${cls} ${flip}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+      };
       $$("[data-icon]").forEach((el) => {
         el.outerHTML = icon(el.dataset.icon, el.className);
       });
