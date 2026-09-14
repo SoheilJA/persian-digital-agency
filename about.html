@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره ما — آلاوبیکس</title>
+  <meta name="description" content="آلاوبیکس یک استودیوی ۲۴ نفره در تهران است: طراح، مهندس و پژوهشگر، با یک استاندارد واحد.">
+  <meta name="theme-color" content="#1D5FE0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D5FE0'/%3E%3Cpath d='M12 9 6 16l6 7M20 9l6 7-6 7M18 7l-4 18' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/output.css">
+</head>
+
+<body class="custom-cursor" data-route="about">
+  <a href="#main" class="sr-only focus:not-sr-only fixed top-4 right-4 z-[300] bg-ink text-white px-5 py-2.5 rounded-full font-display font-semibold text-sm">پرش به محتوا</a>
+
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="progressBar" class="fixed top-0 right-0 h-[3px] bg-primary z-[120]" style="width:0" aria-hidden="true"></div>
+
+  <!-- هدر (توسط layout.js تزریق می‌شود) -->
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-[80]"></header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-32 lg:pt-40 pb-20 overflow-hidden">
+      <div class="absolute -top-24 left-[10%] w-[460px] h-[460px] rounded-full bg-primary/12 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+      <div class="container-x relative grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <p class="eyebrow">درباره آلاوبیکس</p>
+          <h1 class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.5vw,3.6rem)]">یک استودیوی کوچک با یک استاندارد نامعقول.</h1>
+          <p class="mt-6 text-lg text-ink/60 leading-relaxed">ما ۲۴ طراح، مهندس و پژوهشگر هستیم که باور داریم نرم‌افزار باید با همان استاندارد معماری سنجیده شود: باید سرپا بماند، باید خدمت کند، و باید ماندگار باشد.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="contact.html" data-magnetic="12" class="btn-primary">با ما صحبت کنید
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+            <a href="services.html" class="btn-outline">خدمات ما</a>
+          </div>
+        </div>
+        <div class="relative h-[380px] md:h-[440px] reveal" style="--d:150ms">
+          <img loading="lazy" src="https://picsum.photos/seed/alawebix-studio1/900/640.jpg" alt="محیط کار آلاوبیکس در تهران"
+            class="absolute top-0 right-0 w-[78%] rounded-2xl object-cover shadow-lift aspect-[9/6.4]"/>
+          <img loading="lazy" src="https://picsum.photos/seed/alawebix-studio2/600/620.jpg" alt="جلسه کاری تیم آلاوبیکس"
+            class="absolute bottom-0 left-0 w-[52%] rounded-2xl object-cover shadow-lift aspect-[6/6.2] border-4 border-paper"/>
+          <span class="chip absolute top-6 left-2 shadow-soft">استودیو · خیابان ولیعصر</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ داستان ============ -->
+    <section class="py-20 lg:py-24 bg-white border-y border-ink/[.06]">
+      <div class="container-x grid lg:grid-cols-12 gap-14">
+        <div class="lg:col-span-5 reveal">
+          <p class="eyebrow">داستان تا امروز</p>
+          <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem] leading-[1.1]">ساخته‌شده، به فرض اینکه خودمان باید نگهش داریم.</h2>
+        </div>
+        <div class="lg:col-span-7 reveal" style="--d:120ms">
+          <p class="text-lg text-ink/70 leading-[1.85]">آلاوبیکس سال ۱۳۹۵ در یک زیرشیروانی در تهران شروع شد، با دو لپ‌تاپ و یک آزردگی مشترک: بخش زیادی از وب سریع، ارزان و بی‌فکر ساخته می‌شد — و مشتریان دو بار بابتش پول می‌دادند.</p>
+          <p class="mt-6 text-lg text-ink/70 leading-[1.85]">تصمیم گرفتیم هر پروژه را طوری بسازیم که گویی خودمان باید نگهداری‌اش کنیم. نُه سال بعد، این هنوز فیلتر هر تصمیمی است که می‌گیریم: اگر این مال خودمان بود، چه می‌کردیم؟</p>
+          <blockquote class="mt-10 pl-7 border-l-[3px] font-display text-xl md:text-2xl font-medium leading-relaxed" style="border-color:var(--color-primary)">
+            «مأموریت ما عمداً کم‌هیجان است: کاری منتشر کنیم که با افتخار امضایش می‌کنیم، برای مشتریانی که به شام دعوتشان می‌کنیم.»
+            <footer class="mt-6 font-mono text-xs tracking-[.2em] text-ink/45 font-normal">مرتضی اولیایی · بنیان‌گذار</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ چرا ما ============ -->
+    <section class="py-24 lg:py-32">
+      <div class="container-x">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">چرا ما را انتخاب کنید</p>
+          <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]">چهار چیزی که حاضر نیستیم بر سرشان سازش کنیم.</h2>
+        </div>
+        <div class="mt-14 grid md:grid-cols-2 gap-8 lg:gap-10">
+          <div class="reveal card p-8">
+            <span class="font-mono text-sm text-primary">۰۱</span>
+            <h3 class="mt-4 font-display text-xl font-semibold tracking-tight">صنعتگری، نه راه میان‌بر</h3>
+            <p class="mt-3 text-ink/60 leading-relaxed">اگر راه میان‌بری وجود دارد، ما تستش کرده‌ایم — و می‌توانیم دقیقاً بگوییم چرا انتخابش نکردیم.</p>
+          </div>
+          <div class="reveal card p-8" style="--d:110ms">
+            <span class="font-mono text-sm text-primary">۰۲</span>
+            <h3 class="mt-4 font-display text-xl font-semibold tracking-tight">شفافیت رادیکال</h3>
+            <p class="mt-3 text-ink/60 leading-relaxed">زبان ساده، تخمین صادقانه، پیشرفت قابل مشاهده. هرگز نمی‌مانید که ما داریم چه کار می‌کنیم.</p>
+          </div>
+          <div class="reveal card p-8" style="--d:220ms">
+            <span class="font-mono text-sm text-primary">۰۳</span>
+            <h3 class="mt-4 font-display text-xl font-semibold tracking-tight">مالکیت نتیجه</h3>
+            <p class="mt-3 text-ink/60 leading-relaxed">ما ساعت فاکتور نمی‌کنیم و شانه بالا نمی‌اندازیم. خودمان را به معیاری گره می‌زنیم که واقعاً می‌خواهید جابه‌جا کنید.</p>
+          </div>
+          <div class="reveal card p-8" style="--d:330ms">
+            <span class="font-mono text-sm text-primary">۰۴</span>
+            <h3 class="mt-4 font-display text-xl font-semibold tracking-tight">تیم کوچک، افراد ارشد</h3>
+            <p class="mt-3 text-ink/60 leading-relaxed">بدون ساختار هرمی. افرادی که در جلسه ارائه هستند، همان‌هایی هستند که در مخزن کد کار می‌کنند.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ تیم ============ -->
+    <section class="py-24 lg:py-32 bg-white border-y border-ink/[.06]">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-14 reveal">
+          <div>
+            <p class="eyebrow">افراد</p>
+            <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]">ارشد، عمداً.</h2>
+          </div>
+          <p class="font-mono text-xs tracking-[.2em] text-ink/45">۲۴ نفر · ۳ تخصص · ۱ استاندارد</p>
+        </div>
+        <div id="aboutTeam" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start"></div>
+      </div>
+    </section>
+
+    <!-- ============ خط زمانی ============ -->
+    <section class="py-24 lg:py-32">
+      <div class="container-x grid lg:grid-cols-12 gap-14">
+        <div class="lg:col-span-4 reveal">
+          <p class="eyebrow">نقاط عطف</p>
+          <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.4rem] leading-[1.1]">نُه سال، یک مسیر.</h2>
+          <p class="mt-5 text-ink/60 leading-relaxed">از یک زیرشیروانی تا استودیویی که مشتریان سال‌ها با قرارداد نگهش می‌دارند. نسخه کوتاهش:</p>
+        </div>
+        <div class="lg:col-span-8" id="aboutTimeline"></div>
+      </div>
+    </section>
+
+    <section class="pb-24 lg:pb-32">
+      <div class="container-x"><div data-cta data-cta-title="بیایید با هم چیزی بسازیم." data-cta-sub="یک تماس معارفه ۳۰ دقیقه‌ای، بدون هزینه و بدون فشار. ببینیم آیا مناسب همدیگر هستیم."></div></div>
+    </section>
+  </main>
+
+  <!-- فوتر (توسط layout.js تزریق می‌شود) -->
+  <footer id="siteFooter" class="bg-[#151310] text-white/70"></footer>
+
+  <!-- ویجت تغییر تم -->
+  <div id="themeWidget" class="fixed bottom-6 left-6 z-[150]"></div>
+
+  <!-- توست‌ها -->
+  <div id="toasts"></div>
+
+  <script src="src/js/icons.js"></script>
+  <script src="src/js/utils.js"></script>
+  <script src="src/js/data.js"></script>
+  <script src="src/js/components.js"></script>
+  <script src="src/js/layout.js"></script>
+  <script src="src/js/motion.js"></script>
+  <script src="src/js/about.js"></script>
+</body>
+
+</html>

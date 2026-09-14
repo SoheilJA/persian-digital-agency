@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدمات — آلاوبیکس</title>
+  <meta name="description" content="شش خدمت آلاوبیکس: توسعه وب، توسعه نرم‌افزار، طراحی UI/UX، وردپرس، سئو و برند.">
+  <meta name="theme-color" content="#1D5FE0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D5FE0'/%3E%3Cpath d='M12 9 6 16l6 7M20 9l6 7-6 7M18 7l-4 18' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/output.css">
+</head>
+
+<body class="custom-cursor" data-route="services">
+  <a href="#main" class="sr-only focus:not-sr-only fixed top-4 right-4 z-[300] bg-ink text-white px-5 py-2.5 rounded-full font-display font-semibold text-sm">پرش به محتوا</a>
+
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="progressBar" class="fixed top-0 right-0 h-[3px] bg-primary z-[120]" style="width:0" aria-hidden="true"></div>
+
+  <!-- هدر (توسط layout.js تزریق می‌شود) -->
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-[80]"></header>
+
+  <main id="main">
+
+    <section class="relative pt-32 lg:pt-40 pb-16 overflow-hidden">
+      <div class="absolute -top-24 right-[10%] w-[480px] h-[480px] rounded-full bg-primary/14 blur-[130px] pointer-events-none" aria-hidden="true"></div>
+      <div class="container-x relative">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow">خدمات</p>
+          <h1 class="mt-6 font-display font-bold tracking-tight leading-[1.05] text-[clamp(2.3rem,4.5vw,3.6rem)]">شش راه برای ساختن نرم‌افزاری که ارزش امضا کردن دارد.</h1>
+          <p class="mt-6 text-lg md:text-xl text-ink/60 leading-relaxed">هر خدمت توسط همان تیم ارشد ارائه می‌شود — بدون واگذاری به جونیورها، بدون پیمانکار فرعی. برای پیش‌نمایش نشانگر را روی هر ردیف ببرید، برای جزئیات کلیک کنید.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-24 lg:pb-32">
+      <div class="container-x"><div id="servicesList"></div></div>
+    </section>
+
+    <!-- مقایسه صادقانه -->
+    <section class="py-24 lg:py-32 bg-white border-y border-ink/[.06]">
+      <div class="container-x">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">مقایسه صادقانه</p>
+          <h2 class="mt-5 font-display font-bold tracking-tight text-3xl md:text-[2.6rem]">«درست انجام دادن» واقعاً چه چیزی برایتان می‌خرد.</h2>
+        </div>
+        <div class="mt-12 overflow-x-auto reveal">
+          <table class="min-w-[600px]">
+            <thead>
+              <tr class="border-b-2 border-ink/10">
+                <th class="py-4 pr-6 font-display font-semibold">معیار</th>
+                <th class="py-4 px-6 font-display font-semibold text-primary" style="background:rgb(var(--color-primary-rgb)/.07)">آلاوبیکس</th>
+                <th class="py-4 px-6 font-display font-semibold text-ink/60">آژانس معمول</th>
+                <th class="py-4 px-6 font-display font-semibold text-ink/60">فریلنسر</th>
+              </tr>
+            </thead>
+            <tbody id="compareBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-32">
+      <div class="container-x"><div data-cta data-cta-title="نمی‌دانید از کجا شروع کنید؟" data-cta-sub="بگویید چه چیزی درد دارد. ما خدمت مناسب را پیشنهاد می‌دهیم — حتی اگر آن خدمت ما نباشد."></div></div>
+    </section>
+
+    <!-- پیش‌نمایش شناور -->
+    <div id="srvPreview" aria-hidden="true"></div>
+  </main>
+
+  <!-- فوتر (توسط layout.js تزریق می‌شود) -->
+  <footer id="siteFooter" class="bg-[#151310] text-white/70"></footer>
+
+  <!-- ویجت تغییر تم -->
+  <div id="themeWidget" class="fixed bottom-6 left-6 z-[150]"></div>
+
+  <!-- توست‌ها -->
+  <div id="toasts"></div>
+
+  <script src="src/js/icons.js"></script>
+  <script src="src/js/utils.js"></script>
+  <script src="src/js/data.js"></script>
+  <script src="src/js/components.js"></script>
+  <script src="src/js/layout.js"></script>
+  <script src="src/js/motion.js"></script>
+  <script src="src/js/services.js"></script>
+</body>
+
+</html>
